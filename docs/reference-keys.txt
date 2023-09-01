@@ -23,3 +23,10 @@ sharing-your-book
 publishing
 pages
 metadata-for-sharing
+overview
+cost-survey-data
+confidentiality
+url-your-book-url-like-httpsbookdown.orgyihuibookdown
+tables-and-views
+holder
+holder-1
