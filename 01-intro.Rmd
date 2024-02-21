@@ -2,7 +2,58 @@
 
 
 
-## Holder 
+## VCS_COMMON_VARIABLES_MV
+
+This view presents common variables collected from the cost survey over time. Values are presented at the annual vessel-level for the year in which they were queried unless otherwise noted (nominal dollars). To be considered a common variable, the variable must appear in two or more cost surveys over time. Given that the survey instrument changed over time, there may be slight discrepancies in the variable over time. Please see the comments for further clarification. 
+
+
+
+```{r chunck 1 }
+knitr::kable(
+  mtcars[1:5, ],"html",
+  caption = "A knitr kable.")
+```
+
+```{r chunck 2, echo = FALSE, warning = FALSE, message = FALSE }
+library(dplyr)
+library(dbplyr)
+library(readxl)
+library(tidyverse)
+library(knitr)
+
+setwd("C:/Users/samantha.l.werner/Desktop/Github/ORACLE_COST_SURVEY_METADATA/ORACLE_COST_SURVEY_METADATA/data")
+
+VCS_Common_Vars <- read_excel("ORACLE_METADATA.xlsx", sheet = "VCS_COMMON_VARIABLES_MV") 
+
+COMVAR<-VCS_Common_Vars
+knitr::kable(COMVAR[1:72, ], "html", longtable = TRUE,booktabs = TRUE, caption = "Table 2") 
+```
+
+
+```{r chunck 3, echo = FALSE, warning = FALSE, message = FALSE }
+library(dplyr)
+library(dbplyr)
+library(readxl)
+library(tidyverse)
+library(knitr)
+library(kableExtra)
+
+setwd("C:/Users/samantha.l.werner/Desktop/Github/ORACLE_COST_SURVEY_METADATA/ORACLE_COST_SURVEY_METADATA/data")
+
+VCS_Common_Vars <- read_excel("ORACLE_METADATA.xlsx", sheet = "VCS_COMMON_VARIABLES_MV") 
+
+COMVAR<-VCS_Common_Vars
+#COMVAR %>%
+  kbl(COMVAR, "html", caption = 'Table option 3') %>%
+ kable_styling(bootstrap_options = c("striped", "hover")) %>%
+  scroll_box(width = "500px", height = "200px")
+```
+
+
+
+
+
+
 
 
 ## Holder 

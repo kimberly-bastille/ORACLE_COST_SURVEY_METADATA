@@ -8,7 +8,7 @@
   <meta name="description" content="<p>This is a minimal example of using the bookdown package to write a book.
 The HTML output format for this example is bookdown::gitbook,
 set in the _output.yml file.</p>" />
-  <meta name="generator" content="bookdown 0.35 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.37 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 2 Tables and Views | Oracle Cost Survey Metadata" />
   <meta property="og:type" content="book" />
@@ -29,7 +29,7 @@ set in the _output.yml file.</p>" />
 <meta name="author" content="Samantha Werner" />
 
 
-<meta name="date" content="2023-09-01" />
+<meta name="date" content="2024-02-21" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -58,6 +58,8 @@ set in the _output.yml file.</p>" />
 <link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
 <link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
 
 
 <style type="text/css">
@@ -98,7 +100,7 @@ code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
 code span.at { color: #7d9029; } /* Attribute */
 code span.bn { color: #40a070; } /* BaseN */
-code span.bu { } /* BuiltIn */
+code span.bu { color: #008000; } /* BuiltIn */
 code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
 code span.ch { color: #4070a0; } /* Char */
 code span.cn { color: #880000; } /* Constant */
@@ -111,7 +113,7 @@ code span.er { color: #ff0000; font-weight: bold; } /* Error */
 code span.ex { } /* Extension */
 code span.fl { color: #40a070; } /* Float */
 code span.fu { color: #06287e; } /* Function */
-code span.im { } /* Import */
+code span.im { color: #008000; font-weight: bold; } /* Import */
 code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
 code span.kw { color: #007020; font-weight: bold; } /* Keyword */
 code span.op { color: #666666; } /* Operator */
@@ -168,15 +170,15 @@ div.csl-indent {
 <li><a href="./">A Minimal Book Example</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Overview</a>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> url: your book url like https://bookdown.org/yihui/bookdown</a>
 <ul>
 <li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#cost-survey-data"><i class="fa fa-check"></i><b>1.1</b> Cost Survey Data</a></li>
 <li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#confidentiality"><i class="fa fa-check"></i><b>1.2</b> Confidentiality</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="tables-and-views.html"><a href="tables-and-views.html"><i class="fa fa-check"></i><b>2</b> Tables and Views</a>
 <ul>
-<li class="chapter" data-level="2.1" data-path="tables-and-views.html"><a href="tables-and-views.html#holder"><i class="fa fa-check"></i><b>2.1</b> Holder</a></li>
-<li class="chapter" data-level="2.2" data-path="tables-and-views.html"><a href="tables-and-views.html#holder-1"><i class="fa fa-check"></i><b>2.2</b> Holder</a></li>
+<li class="chapter" data-level="2.1" data-path="tables-and-views.html"><a href="tables-and-views.html#vcs_common_variables_mv"><i class="fa fa-check"></i><b>2.1</b> VCS_COMMON_VARIABLES_MV</a></li>
+<li class="chapter" data-level="2.2" data-path="tables-and-views.html"><a href="tables-and-views.html#holder"><i class="fa fa-check"></i><b>2.2</b> Holder</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="cross.html"><a href="cross.html"><i class="fa fa-check"></i><b>3</b> Cross-references</a>
 <ul>
@@ -224,11 +226,4511 @@ div.csl-indent {
             <section class="normal" id="section-">
 <div id="tables-and-views" class="section level1 hasAnchor" number="2">
 <h1><span class="header-section-number">Chapter 2</span> Tables and Views<a href="tables-and-views.html#tables-and-views" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div id="holder" class="section level2 hasAnchor" number="2.1">
-<h2><span class="header-section-number">2.1</span> Holder<a href="tables-and-views.html#holder" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="vcs_common_variables_mv" class="section level2 hasAnchor" number="2.1">
+<h2><span class="header-section-number">2.1</span> VCS_COMMON_VARIABLES_MV<a href="tables-and-views.html#vcs_common_variables_mv" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>This view presents common variables collected from the cost survey over time. Values are presented at the annual vessel-level for the year in which they were queried unless otherwise noted (nominal dollars). To be considered a common variable, the variable must appear in two or more cost surveys over time. Given that the survey instrument changed over time, there may be slight discrepancies in the variable over time. Please see the comments for further clarification.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="tables-and-views.html#cb1-1" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(</span>
+<span id="cb1-2"><a href="tables-and-views.html#cb1-2" tabindex="-1"></a>  mtcars[<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>, ],<span class="st">&quot;html&quot;</span>,</span>
+<span id="cb1-3"><a href="tables-and-views.html#cb1-3" tabindex="-1"></a>  <span class="at">caption =</span> <span class="st">&quot;A knitr kable.&quot;</span>)</span></code></pre></div>
+<table>
+<caption>
+(#tab:chunck 1)A knitr kable.
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:right;">
+mpg
+</th>
+<th style="text-align:right;">
+cyl
+</th>
+<th style="text-align:right;">
+disp
+</th>
+<th style="text-align:right;">
+hp
+</th>
+<th style="text-align:right;">
+drat
+</th>
+<th style="text-align:right;">
+wt
+</th>
+<th style="text-align:right;">
+qsec
+</th>
+<th style="text-align:right;">
+vs
+</th>
+<th style="text-align:right;">
+am
+</th>
+<th style="text-align:right;">
+gear
+</th>
+<th style="text-align:right;">
+carb
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Mazda RX4
+</td>
+<td style="text-align:right;">
+21.0
+</td>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:right;">
+160
+</td>
+<td style="text-align:right;">
+110
+</td>
+<td style="text-align:right;">
+3.90
+</td>
+<td style="text-align:right;">
+2.620
+</td>
+<td style="text-align:right;">
+16.46
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+4
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Mazda RX4 Wag
+</td>
+<td style="text-align:right;">
+21.0
+</td>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:right;">
+160
+</td>
+<td style="text-align:right;">
+110
+</td>
+<td style="text-align:right;">
+3.90
+</td>
+<td style="text-align:right;">
+2.875
+</td>
+<td style="text-align:right;">
+17.02
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+4
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Datsun 710
+</td>
+<td style="text-align:right;">
+22.8
+</td>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+108
+</td>
+<td style="text-align:right;">
+93
+</td>
+<td style="text-align:right;">
+3.85
+</td>
+<td style="text-align:right;">
+2.320
+</td>
+<td style="text-align:right;">
+18.61
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Hornet 4 Drive
+</td>
+<td style="text-align:right;">
+21.4
+</td>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:right;">
+258
+</td>
+<td style="text-align:right;">
+110
+</td>
+<td style="text-align:right;">
+3.08
+</td>
+<td style="text-align:right;">
+3.215
+</td>
+<td style="text-align:right;">
+19.44
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Hornet Sportabout
+</td>
+<td style="text-align:right;">
+18.7
+</td>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:right;">
+360
+</td>
+<td style="text-align:right;">
+175
+</td>
+<td style="text-align:right;">
+3.15
+</td>
+<td style="text-align:right;">
+3.440
+</td>
+<td style="text-align:right;">
+17.02
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+2
+</td>
+</tr>
+</tbody>
+</table>
+<table>
+<caption>
+(#tab:chunck 2)Table 2
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+Variable Name
+</th>
+<th style="text-align:left;">
+Type
+</th>
+<th style="text-align:left;">
+Description
+</th>
+<th style="text-align:left;">
+Nullable
+</th>
+<th style="text-align:left;">
+Survey Years
+</th>
+<th style="text-align:left;">
+Notes
+</th>
+<th style="text-align:left;">
+Person 1 (SAM)
+</th>
+<th style="text-align:left;">
+Elizabeth
+</th>
+<th style="text-align:left;">
+Greg
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+STRATA
+</td>
+<td style="text-align:left;">
+VARCHAR2(100)
+</td>
+<td style="text-align:left;">
+Gear and vessel length (either above the average vessel length for this gear group or below) for data stratification
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+2011, 2012, 2015
+</td>
+<td style="text-align:left;">
+Not a survey question but used for sample stratification
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+SURVEY_MODE
+</td>
+<td style="text-align:left;">
+NUMBER(1)
+</td>
+<td style="text-align:left;">
+Mode for which the survey was completed (0-online response; 1 - mail response)
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+2011, 2012, 2015
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+VESSEL_NAME
+</td>
+<td style="text-align:left;">
+VARCHAR2(80)
+</td>
+<td style="text-align:left;">
+Name of the vessel
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+2011, 2012, 2015
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+COMMENTS
+</td>
+<td style="text-align:left;">
+VARCHAR2(4000)
+</td>
+<td style="text-align:left;">
+Comments from the survey participant recorded at the end of the survey
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+2011, 2012, 2015
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+HULLNUM
+</td>
+<td style="text-align:left;">
+VARCHAR2(30)
+</td>
+<td style="text-align:left;">
+Official vessel registration number
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+2011, 2012, 2015
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+SURVEY_YEAR
+</td>
+<td style="text-align:left;">
+NUMBER(4)
+</td>
+<td style="text-align:left;">
+Year survey data pertains to
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+2011, 2012, 2015
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+x
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+GEAR_TYPE
+</td>
+<td style="text-align:left;">
+VARCHAR2(40)
+</td>
+<td style="text-align:left;">
+Primary gear type based on majority revenues from the last year active (Trawl, Gill Nets, Longline, Pots and Traps, Handgear, Dredge, Other)
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+2011, 2012, 2015
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+VESSEL_AND_PERMITS_VAL
+</td>
+<td style="text-align:left;">
+NUMBER(9)
+</td>
+<td style="text-align:left;">
+The value of the vessel and fishing permits including equipment, fishing gear, permits, and fishing history
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+2011, 2012, 2015
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+YEAR_ACQUIRED
+</td>
+<td style="text-align:left;">
+NUMBER(4)
+</td>
+<td style="text-align:left;">
+Year vessel owner acquired the vessel
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+2011, 2012, 2015
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+OWNER_TYPE
+</td>
+<td style="text-align:left;">
+VARCHAR2(30)
+</td>
+<td style="text-align:left;">
+Type of ownership for the selected vessel (corporation, sole proprietorship, s corporation, sole proprietorship, other.)
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+2011, 2012, 2015
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+Data: upper and lowercase options for "limited partnership" and "other"; "General partnership" only option that is completely lowercase Sam–pretty sure Tanya is working on this?
+</td>
+<td style="text-align:left;">
+x
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+OWNERS_NUM
+</td>
+<td style="text-align:left;">
+NUMBER(2)
+</td>
+<td style="text-align:left;">
+Number of owners of the selected vessel
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+2011, 2012, 2015
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+VESSEL_CONDITION_ACQUIRED
+</td>
+<td style="text-align:left;">
+VARCHAR2(50)
+</td>
+<td style="text-align:left;">
+Vessel condition when acquired: New or Acquired from Previous Owner
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+2011, 2012, 2015
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+HAULOUT
+</td>
+<td style="text-align:left;">
+CHAR(1)
+</td>
+<td style="text-align:left;">
+Was the vessel hauled out in the year queried for any reason? (Y/N)
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+2011, 2012
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+HAULOUT_FREQ
+</td>
+<td style="text-align:left;">
+VARCHAR2(100)
+</td>
+<td style="text-align:left;">
+Frequency of haul-out events (every year, every other year, every x years, every xx months). This also includes values from "other" given that they often fit the descriptions listed. Note, if a participant failed to provide the number of years or months, they will render as X or XX.
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+2011, 2012
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+HAULOUT_COST
+</td>
+<td style="text-align:left;">
+NUMBER
+</td>
+<td style="text-align:left;">
+Haul-out costs incurred in the year queried
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+2011, 2012
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+RMUI_ENGINE_EXP
+</td>
+<td style="text-align:left;">
+NUMBER
+</td>
+<td style="text-align:left;">
+Total annual propulsion engine rmui costs for selected vessel
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+2011<em>, 2012</em>
+</td>
+<td style="text-align:left;">
+*RM and UI were asked separately for each sub cost category so they are summed to get a combined RMUI value
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+RMUI_DECK_EQPT_EXP
+</td>
+<td style="text-align:left;">
+NUMBER
+</td>
+<td style="text-align:left;">
+Total annual deck equipment and other machinery rmui costs for selected vessel
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+2011<em>, 2012</em>
+</td>
+<td style="text-align:left;">
+*RM and UI were asked separately for each sub cost category so they are summed to get a combined RMUI value
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+RMUI_HULL_EXP
+</td>
+<td style="text-align:left;">
+NUMBER
+</td>
+<td style="text-align:left;">
+Total annual hull rmui expenses for selected vessel
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+2011<em>, 2012</em>
+</td>
+<td style="text-align:left;">
+*RM and UI were asked separately for each sub cost category so they are summed to get a combined RMUI value
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+RMUI_GEAR_EXP
+</td>
+<td style="text-align:left;">
+NUMBER
+</td>
+<td style="text-align:left;">
+Total annual fishing gear rmui expense cost for selected vessel
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+2011<em>, 2012</em>
+</td>
+<td style="text-align:left;">
+*RM and UI were asked separately for each sub cost category so they are summed to get a combined RMUI value
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+RMUI_ELECTRONICS_EXP
+</td>
+<td style="text-align:left;">
+NUMBER
+</td>
+<td style="text-align:left;">
+Total annual wheelhouse electronics rmui cost for selected vessel
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+2011<em>, 2012</em>
+</td>
+<td style="text-align:left;">
+*RM and UI were asked separately for each sub cost category so they are summed to get a combined RMUI value
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+RMUI_PROCESS_REFRIG_EXP
+</td>
+<td style="text-align:left;">
+NUMBER
+</td>
+<td style="text-align:left;">
+Total annual processing/refrigeration rmui cost for selected vessel
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+2011<em>, 2012</em>
+</td>
+<td style="text-align:left;">
+*RM and UI were asked separately for each sub cost category so they are summed to get a combined RMUI value
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+RMUI_SAFETY_EQPT_EXP
+</td>
+<td style="text-align:left;">
+NUMBER
+</td>
+<td style="text-align:left;">
+Total annual safety equipment rmui cost for selected vessel
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+2011<em>, 2012</em>
+</td>
+<td style="text-align:left;">
+*RM and UI were asked separately for each sub cost category so they are summed to get a combined RMUI value
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+UI_COST
+</td>
+<td style="text-align:left;">
+NUMBER
+</td>
+<td style="text-align:left;">
+Total summed upgrade costs (when applicable)
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+2011, 2012, 2015
+</td>
+<td style="text-align:left;">
+2011: individual cost categories provided for propulsion engine, deck equipment/other machinery, hull, fishing gear, wheelhouse and gear electronics, processing/refrigeration, safety equipment; 2012: same format/categories as 2011 plus an "other" category; 2015: asked for one total cost for all categories combine (same categories as 2011); 2022 and on: RM and UI were not asked for separately
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+RM_COST
+</td>
+<td style="text-align:left;">
+NUMBER
+</td>
+<td style="text-align:left;">
+Total summed repair and maintenance costs (when applicable, see comment)
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+2011, 2012, 2015
+</td>
+<td style="text-align:left;">
+2011: individual cost categories provided for propulsion engine, deck equipment/other machinery, hull, fishing gear, wheelhouse and gear electronics, processing/refrigeration, safety equipment. Haul-out cost asked separately; 2012: same format/categories as 2011 plus an "other" category; 2015: asked for one total cost for all categories combine (same categories as 2011). Haul-out cost not asked; 2022 and on: RM and UI were not asked for separately. Haul-out cost included as a RMUI variable.
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+RMUI_COST
+</td>
+<td style="text-align:left;">
+NUMBER
+</td>
+<td style="text-align:left;">
+Total summed upgrade and improvement and repair and maintenance costs (when applicable, see comment)
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+2011, 2012, 2015
+</td>
+<td style="text-align:left;">
+RM and UI asked separately in 2011, 2012, 2015 but can be summed by adding variables UI_COST and RM_COST.
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+MOORING_FEES
+</td>
+<td style="text-align:left;">
+NUMBER(9)
+</td>
+<td style="text-align:left;">
+Total annual mooring/dockage fees for the selected vessel
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+2011, 2012, 2015
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+PERMIT_FEES
+</td>
+<td style="text-align:left;">
+NUMBER(9)
+</td>
+<td style="text-align:left;">
+Total annual state and Federal Permits and/or License Renewal Fees for the selected vessel
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+2011, 2012, 2015
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+VES_INSURANCE_COST
+</td>
+<td style="text-align:left;">
+NUMBER(9)
+</td>
+<td style="text-align:left;">
+Vessel insurance cost of the selected vessel including premium paid for hull and/or P&amp;I insurance
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+2011, 2012, 2015
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+VES_INSURED_MONTHS
+</td>
+<td style="text-align:left;">
+NUMBER(2)
+</td>
+<td style="text-align:left;">
+Number of months selected vessel was insured
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+2011, 2012, 2015
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+FUEL_COST
+</td>
+<td style="text-align:left;">
+NUMBER
+</td>
+<td style="text-align:left;">
+Total annual fuel cost for selected vessel
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+2011, 2012
+</td>
+<td style="text-align:left;">
+Includes oil and filter for 2011 and 2012
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+Data: -99999999’s presenting
+</td>
+<td style="text-align:left;">
+x
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+BAIT_COST
+</td>
+<td style="text-align:left;">
+NUMBER
+</td>
+<td style="text-align:left;">
+Total annual bait cost for selected vessel
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+2011, 2012
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+Data: -99999999’s presenting
+</td>
+<td style="text-align:left;">
+x
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+FOOD_COST
+</td>
+<td style="text-align:left;">
+NUMBER
+</td>
+<td style="text-align:left;">
+Total annual food cost for selected vessel
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+2011, 2012
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+Data: -99999999’s presenting
+</td>
+<td style="text-align:left;">
+x
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+ICE_COST
+</td>
+<td style="text-align:left;">
+NUMBER
+</td>
+<td style="text-align:left;">
+Total annual ice cost for selected vessel
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+2011, 2012
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+Data: -99999999’s presenting
+</td>
+<td style="text-align:left;">
+x
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CATCH_HANDLING_COST
+</td>
+<td style="text-align:left;">
+NUMBER
+</td>
+<td style="text-align:left;">
+Total annual catch handling cost such as auction, lumping, grading, shipping etc. for selected vessel
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+2011, 2012
+</td>
+<td style="text-align:left;">
+2012 includes the cost of sales representatives
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+Data: -99999999’s presenting
+</td>
+<td style="text-align:left;">
+x
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CAPTAIN_STATUS
+</td>
+<td style="text-align:left;">
+VARCHAR2(30)
+</td>
+<td style="text-align:left;">
+Captain type for the majority of trips taken; (Examples: Mostly Hired Captain, Mostly Owner-operated, Split Evenly [split evenly between hired captain and owner-operated] No Trips This Year, Other)
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+2011, 2012, 2015
+</td>
+<td style="text-align:left;">
+The "split evenly" and "no trips" options were only provided in 2015 survey. 2011 and 2012 only had mostly owner-operated, mostly hired captain, and other as selection options.
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CREW_PURCHASES_DESC
+</td>
+<td style="text-align:left;">
+VARCHAR2(2000 BYTE)
+</td>
+<td style="text-align:left;">
+Other items that are purchased by crew
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+2011, 2012
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+BOAT_PCT
+</td>
+<td style="text-align:left;">
+NUMBER
+</td>
+<td style="text-align:left;">
+Boat’s percent of gross revenue if share payment system is used
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+2011, 2012, *2015
+</td>
+<td style="text-align:left;">
+*This question was asked in 2015, but the survey form did not print correctly such that no responses were recorded for this question.
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CREW_PCT
+</td>
+<td style="text-align:left;">
+NUMBER
+</td>
+<td style="text-align:left;">
+Crew percent of gross revenues if share payment system is used
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+2011, 2012, *2015
+</td>
+<td style="text-align:left;">
+*This question was asked in 2015, but the survey form did not print correctly such that no responses were recorded for this question.
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CAPTAIN_PCT
+</td>
+<td style="text-align:left;">
+NUMBER
+</td>
+<td style="text-align:left;">
+Hired captain’s percent of gross revenues if share payment system is used
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+2011, 2012, *2015
+</td>
+<td style="text-align:left;">
+*This question was asked in 2015, but the survey form did not print correctly such that no responses were recorded for this question.
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+QUOTA_DAS_PYMTS
+</td>
+<td style="text-align:left;">
+NUMBER
+</td>
+<td style="text-align:left;">
+Quota or DAS lease-in costs including estimated value of non-monetary payments
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+2011, 2012, 2015
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+x
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+VESSEL_COST
+</td>
+<td style="text-align:left;">
+NUMBER
+</td>
+<td style="text-align:left;">
+Total summed costs from the vessel expense section - mooring fees, permit fees, vessel insurance cost, vessel or permit payments for the selected vessel
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+2011, 2012, 2015
+</td>
+<td style="text-align:left;">
+Overhead costs were calculated at the vessel-level for 2012 and 2015 (divided by the number of vessels owned) but apportioned by the respondent in 2011
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+BUSINESS_TRAVEL_COST
+</td>
+<td style="text-align:left;">
+NUMBER
+</td>
+<td style="text-align:left;">
+Total annual business travel cost such as business associated lodging, travel, and transportation with the selected vessel
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+2011, 2012, 2015
+</td>
+<td style="text-align:left;">
+Overhead costs were calculated at the vessel-level for 2012 and 2015 (divided by the number of vessels owned) but apportioned by the respondent in 2011
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+VEHICLE_USAGE_COST
+</td>
+<td style="text-align:left;">
+NUMBER
+</td>
+<td style="text-align:left;">
+Total annual business vehicle usage costs apportioned to the selected vessel
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+2011, 2012, 2015
+</td>
+<td style="text-align:left;">
+Overhead costs were calculated at the vessel-level for 2012 and 2015 (divided by the number of vessels owned) but apportioned by the respondent in 2011
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+ASSOCIATION_FEES
+</td>
+<td style="text-align:left;">
+NUMBER
+</td>
+<td style="text-align:left;">
+Association fees paid including fishing organization, sector fees, and union dues for the selected vessel
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+2011, 2012, 2015
+</td>
+<td style="text-align:left;">
+Overhead costs were calculated at the vessel-level for 2012 and 2015 (divided by the number of vessels owned) but apportioned by the respondent in 2011
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+PROFESSIONAL_FEES
+</td>
+<td style="text-align:left;">
+NUMBER
+</td>
+<td style="text-align:left;">
+Professional fees paid including settlement, legal and accounting apportioned to the selected vessel
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+2011, 2012, 2015
+</td>
+<td style="text-align:left;">
+Overhead costs were calculated at the vessel-level for 2012 and 2015 (divided by the number of vessels owned) but apportioned by the respondent in 2011
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+VESSEL_OR_PERMIT_PYMTS
+</td>
+<td style="text-align:left;">
+NUMBER
+</td>
+<td style="text-align:left;">
+Vessel/permit/business loan payments made in the respective year, see notes for more information.
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+2011, 2012, 2015
+</td>
+<td style="text-align:left;">
+In 2011, 2012 and 2015, this variable includes principal paid on business loans and Interest paid on business loans (apportioned by vessel by dividing by the number of owned vessels for 2012 and 2015). Overhead costs were calculated at the vessel-level for 2012 and 2015 (divided by the number of vessels owned) but apportioned by the respondent in 2015.
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+QUOTA_MONITORING_COST
+</td>
+<td style="text-align:left;">
+NUMBER(9)
+</td>
+<td style="text-align:left;">
+Total quota monitoring costs (observer or dockside monitoring costs) for the selected vessel
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+2011, 2012, 2015
+</td>
+<td style="text-align:left;">
+Overhead costs were calculated at the vessel-level for 2012 and 2015 (divided by the number of vessels owned) but apportioned by the respondent in 2011
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+ADVERTISING_COST
+</td>
+<td style="text-align:left;">
+NUMBER
+</td>
+<td style="text-align:left;">
+Total annual advertising costs for the selected vessel
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+2011, 2012, 2015
+</td>
+<td style="text-align:left;">
+Overhead costs were calculated at the vessel-level for 2012 and 2015 (divided by the number of vessels owned) but apportioned by the respondent in 2011
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+COMMUNICATION_COST
+</td>
+<td style="text-align:left;">
+NUMBER
+</td>
+<td style="text-align:left;">
+Total annual communications costs for the selected vessel
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+2011, 2012
+</td>
+<td style="text-align:left;">
+Overhead costs were calculated at the vessel-level for 2012 and 2015 (divided by the number of vessels owned) but apportioned by the respondent in 2011
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+OFFICE_EXP
+</td>
+<td style="text-align:left;">
+NUMBER
+</td>
+<td style="text-align:left;">
+Total annual office/workshop/storage expenses apportioned to the selected vessel
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+2011, 2012, 2015
+</td>
+<td style="text-align:left;">
+SHOP_EXP and OFFICE_EXP variables were combined for survey years 2011 and 2012 to generate this variable for those years. In 2015, workshop or office expenses were not collected.Overhead costs were calculated at the vessel-level for 2012 and 2015 (divided by the number of vessels owned) but apportioned by the respondent in 2011
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NONCREW_LABOR_COST
+</td>
+<td style="text-align:left;">
+NUMBER
+</td>
+<td style="text-align:left;">
+Total annual payment made for non-crew labor including payments to accountants, office administrative
+assistants, bookkeepers, and night watchmen apportioned to selected vessel
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+2011, 2012, 2015
+</td>
+<td style="text-align:left;">
+Overhead costs were calculated at the vessel-level for 2012 and 2015 (divided by the number of vessels owned) but apportioned by the respondent in 2011
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+OVERHEAD_COST
+</td>
+<td style="text-align:left;">
+NUMBER
+</td>
+<td style="text-align:left;">
+Total summed overhead costs - Business Vehicle Usage Costs
+Business Travel Costs, Association Fees Paid, Professional Fees Paid, Advertising Costs, Communications Costs, Office/Shop Expenses, Non-crew Labor Payments
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+2011, 2012, 2015
+</td>
+<td style="text-align:left;">
+Overhead costs were calculated at the vessel-level for 2012 and 2015 (divided by the number of vessels owned) but apportioned by the respondent in 2011
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+Data: some answers have very long decimals
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CREW_PYMTS
+</td>
+<td style="text-align:left;">
+NUMBER(9)
+</td>
+<td style="text-align:left;">
+Total annual payment to crew for selected vessel
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+2012, 2015
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CREW_BENEFITS_VAL
+</td>
+<td style="text-align:left;">
+NUMBER(9)
+</td>
+<td style="text-align:left;">
+Total amount paid in benefits to crew and hired captain on the selected vessel
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+2011, 2012, 2015
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CAPTAIN_PYMTS
+</td>
+<td style="text-align:left;">
+NUMBER
+</td>
+<td style="text-align:left;">
+Total annual payment to hired captains for selected vessel
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+2012, 2015
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+ALL_CREW_CAPT_PYMTS
+</td>
+<td style="text-align:left;">
+NUMBER
+</td>
+<td style="text-align:left;">
+Summed crew and hired captain payments
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+2011, 2012<em>, 2015</em>
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+VESSELS_NUM
+</td>
+<td style="text-align:left;">
+NUMBER
+</td>
+<td style="text-align:left;">
+Number of vessels operated or maintained for fishing business
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+2012, 2015
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+LEASING_QUOTA_REVENUE
+</td>
+<td style="text-align:left;">
+NUMBER
+</td>
+<td style="text-align:left;">
+Total revenue received from leasing out quota or DAS
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+2015
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+x
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+TOTAL_OTHR_VES_COST
+</td>
+<td style="text-align:left;">
+NUMBER
+</td>
+<td style="text-align:left;">
+Total sum of other costs incurred by the selected vessel not inquired about in the survey
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+2011, 2012, 2015
+</td>
+<td style="text-align:left;">
+Includes: OTHR_VES_COST1 OTHR_VES_COST2 from 2011, OTHR_VES_COST1 OTHR_VES_COST2 from 2012 and OTHER_VESSEL_COST from 2015
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+TOTAL_OTHR_BUS_COST
+</td>
+<td style="text-align:left;">
+NUMBER
+</td>
+<td style="text-align:left;">
+Total amount of other costs incurred by the entire fishing business not inquired about in the survey
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+2012, 2015
+</td>
+<td style="text-align:left;">
+Includes OTHR_BUS_COST1, OTHR_BUS_COST2 from 2012 and OTHER_BUSINESS_COST from 2015
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+x
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+WATER_COST
+</td>
+<td style="text-align:left;">
+NUMBER
+</td>
+<td style="text-align:left;">
+Total annual fresh water costs for the selected vessel
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+2011, 2012
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+Data: -99999999’s presenting
+</td>
+<td style="text-align:left;">
+x
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+FISHING_SPLY_COST
+</td>
+<td style="text-align:left;">
+NUMBER
+</td>
+<td style="text-align:left;">
+Total annual cost for general fishing supplies such as knives, picks, hooks, boxes, bags, ties, lobster bands, rags,
+tape, links/rings, lines/twine etc.
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+2011, 2012
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+Data: -99999999’s presenting
+</td>
+<td style="text-align:left;">
+x
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CREW_SPLY_COST
+</td>
+<td style="text-align:left;">
+NUMBER
+</td>
+<td style="text-align:left;">
+Total annual cost for general crew supplies such as gloves, boot liners, foul weather gear etc.
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+2011, 2012
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+Data: -99999999’s presenting
+</td>
+<td style="text-align:left;">
+x
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+OTHER_OPERATING_COST
+</td>
+<td style="text-align:left;">
+NUMBER
+</td>
+<td style="text-align:left;">
+Other annual operating costs not collected in the survey
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+2011, 2012
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+Data: -99999999’s presenting
+</td>
+<td style="text-align:left;">
+x
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CREW_SIZE
+</td>
+<td style="text-align:left;">
+NUMBER(4)
+</td>
+<td style="text-align:left;">
+Average size of the crew excluding the captain in terms of crew members
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+2011, 2012, 2015
+</td>
+<td style="text-align:left;">
+In 2011 it was not stated in the directions to exclude the owner/self in the average crew size count, but it was specified in 2012 and 2015.
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+GROSS_REV_EXPENSES_DESC
+</td>
+<td style="text-align:left;">
+VARCHAR2(4000)
+</td>
+<td style="text-align:left;">
+Type of expenses that are deducted from gross revenue
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+2011, 2012
+</td>
+<td style="text-align:left;">
+Question does not answer if theses expenses are paid by the crew or boat
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CREW_EXP_DEDUCTED_DESC
+</td>
+<td style="text-align:left;">
+VARCHAR2(2000)
+</td>
+<td style="text-align:left;">
+Type of expenses deducted from the crews payment
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+2011, 2012
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CAPT_EXP_DEDUCTED_DESC
+</td>
+<td style="text-align:left;">
+VARCHAR2(2000)
+</td>
+<td style="text-align:left;">
+Type of expenses deducted from the captain’s payment
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+2011, 2012
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CREWPAY_OTHER
+</td>
+<td style="text-align:left;">
+VARCHAR2(2000)
+</td>
+<td style="text-align:left;">
+Description of alternative crew payment system, if the share system was not appropriate
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+2011, 2012
+</td>
+<td style="text-align:left;">
+In 2015, there is the a question asking to describe the flat rate system if a share system was not used rather than an open ended question of any alternative payment system which it is not included here.
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+PERSONAL_HEALTH_INS
+</td>
+<td style="text-align:left;">
+VARCHAR2(10)
+</td>
+<td style="text-align:left;">
+Personal health insurance: Yes- yes, I have personal health insurance, No- no I don’t have health insurance, Spouse- no I am covered by my spouse’s plan, Other
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+2011, 2012, *2015
+</td>
+<td style="text-align:left;">
+No "other" option was presented in 2011.
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+Data: Other/other, Spouse/spouse, No/no, Yes/yes options need to be consistent– Already noted for Tanya
+</td>
+<td style="text-align:left;">
+x
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+PERSONAL_HEALTH_INS_COST
+</td>
+<td style="text-align:left;">
+NUMBER(9)
+</td>
+<td style="text-align:left;">
+Cost participant did have personal health insurance
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+2011, 2012, 2015
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+VESSEL_INACTIVE_FLAG
+</td>
+<td style="text-align:left;">
+NUMBER
+</td>
+<td style="text-align:left;">
+Vessel was inactive 1= Inactive 0 = active
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+2012, 2015
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+</tr>
+</tbody>
+</table>
+<div style="border: 1px solid #ddd; padding: 0px; overflow-y: scroll; height:200px; overflow-x: scroll; width:500px; ">
+<table class="table table-striped table-hover" style="margin-left: auto; margin-right: auto;">
+<caption>
+(#tab:chunck 3)Table option 3
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+Variable Name
+</th>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+Type
+</th>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+Description
+</th>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+Nullable
+</th>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+Survey Years
+</th>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+Notes
+</th>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+Person 1 (SAM)
+</th>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+Elizabeth
+</th>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+Greg
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+STRATA
+</td>
+<td style="text-align:left;">
+VARCHAR2(100)
+</td>
+<td style="text-align:left;">
+Gear and vessel length (either above the average vessel length for this gear group or below) for data stratification
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+2011, 2012, 2015
+</td>
+<td style="text-align:left;">
+Not a survey question but used for sample stratification
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+SURVEY_MODE
+</td>
+<td style="text-align:left;">
+NUMBER(1)
+</td>
+<td style="text-align:left;">
+Mode for which the survey was completed (0-online response; 1 - mail response)
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+2011, 2012, 2015
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+VESSEL_NAME
+</td>
+<td style="text-align:left;">
+VARCHAR2(80)
+</td>
+<td style="text-align:left;">
+Name of the vessel
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+2011, 2012, 2015
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+COMMENTS
+</td>
+<td style="text-align:left;">
+VARCHAR2(4000)
+</td>
+<td style="text-align:left;">
+Comments from the survey participant recorded at the end of the survey
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+2011, 2012, 2015
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+HULLNUM
+</td>
+<td style="text-align:left;">
+VARCHAR2(30)
+</td>
+<td style="text-align:left;">
+Official vessel registration number
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+2011, 2012, 2015
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+SURVEY_YEAR
+</td>
+<td style="text-align:left;">
+NUMBER(4)
+</td>
+<td style="text-align:left;">
+Year survey data pertains to
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+2011, 2012, 2015
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+x
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+GEAR_TYPE
+</td>
+<td style="text-align:left;">
+VARCHAR2(40)
+</td>
+<td style="text-align:left;">
+Primary gear type based on majority revenues from the last year active (Trawl, Gill Nets, Longline, Pots and Traps, Handgear, Dredge, Other)
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+2011, 2012, 2015
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+VESSEL_AND_PERMITS_VAL
+</td>
+<td style="text-align:left;">
+NUMBER(9)
+</td>
+<td style="text-align:left;">
+The value of the vessel and fishing permits including equipment, fishing gear, permits, and fishing history
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+2011, 2012, 2015
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+YEAR_ACQUIRED
+</td>
+<td style="text-align:left;">
+NUMBER(4)
+</td>
+<td style="text-align:left;">
+Year vessel owner acquired the vessel
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+2011, 2012, 2015
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+OWNER_TYPE
+</td>
+<td style="text-align:left;">
+VARCHAR2(30)
+</td>
+<td style="text-align:left;">
+Type of ownership for the selected vessel (corporation, sole proprietorship, s corporation, sole proprietorship, other.)
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+2011, 2012, 2015
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+Data: upper and lowercase options for “limited partnership” and “other”; “General partnership” only option that is completely lowercase Sam–pretty sure Tanya is working on this?
+</td>
+<td style="text-align:left;">
+x
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+OWNERS_NUM
+</td>
+<td style="text-align:left;">
+NUMBER(2)
+</td>
+<td style="text-align:left;">
+Number of owners of the selected vessel
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+2011, 2012, 2015
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+VESSEL_CONDITION_ACQUIRED
+</td>
+<td style="text-align:left;">
+VARCHAR2(50)
+</td>
+<td style="text-align:left;">
+Vessel condition when acquired: New or Acquired from Previous Owner
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+2011, 2012, 2015
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+HAULOUT
+</td>
+<td style="text-align:left;">
+CHAR(1)
+</td>
+<td style="text-align:left;">
+Was the vessel hauled out in the year queried for any reason? (Y/N)
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+2011, 2012
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+HAULOUT_FREQ
+</td>
+<td style="text-align:left;">
+VARCHAR2(100)
+</td>
+<td style="text-align:left;">
+Frequency of haul-out events (every year, every other year, every x years, every xx months). This also includes values from “other” given that they often fit the descriptions listed. Note, if a participant failed to provide the number of years or months, they will render as X or XX.
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+2011, 2012
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+HAULOUT_COST
+</td>
+<td style="text-align:left;">
+NUMBER
+</td>
+<td style="text-align:left;">
+Haul-out costs incurred in the year queried
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+2011, 2012
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+RMUI_ENGINE_EXP
+</td>
+<td style="text-align:left;">
+NUMBER
+</td>
+<td style="text-align:left;">
+Total annual propulsion engine rmui costs for selected vessel
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+2011<em>, 2012</em>
+</td>
+<td style="text-align:left;">
+*RM and UI were asked separately for each sub cost category so they are summed to get a combined RMUI value
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+RMUI_DECK_EQPT_EXP
+</td>
+<td style="text-align:left;">
+NUMBER
+</td>
+<td style="text-align:left;">
+Total annual deck equipment and other machinery rmui costs for selected vessel
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+2011<em>, 2012</em>
+</td>
+<td style="text-align:left;">
+*RM and UI were asked separately for each sub cost category so they are summed to get a combined RMUI value
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+RMUI_HULL_EXP
+</td>
+<td style="text-align:left;">
+NUMBER
+</td>
+<td style="text-align:left;">
+Total annual hull rmui expenses for selected vessel
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+2011<em>, 2012</em>
+</td>
+<td style="text-align:left;">
+*RM and UI were asked separately for each sub cost category so they are summed to get a combined RMUI value
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+RMUI_GEAR_EXP
+</td>
+<td style="text-align:left;">
+NUMBER
+</td>
+<td style="text-align:left;">
+Total annual fishing gear rmui expense cost for selected vessel
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+2011<em>, 2012</em>
+</td>
+<td style="text-align:left;">
+*RM and UI were asked separately for each sub cost category so they are summed to get a combined RMUI value
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+RMUI_ELECTRONICS_EXP
+</td>
+<td style="text-align:left;">
+NUMBER
+</td>
+<td style="text-align:left;">
+Total annual wheelhouse electronics rmui cost for selected vessel
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+2011<em>, 2012</em>
+</td>
+<td style="text-align:left;">
+*RM and UI were asked separately for each sub cost category so they are summed to get a combined RMUI value
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+RMUI_PROCESS_REFRIG_EXP
+</td>
+<td style="text-align:left;">
+NUMBER
+</td>
+<td style="text-align:left;">
+Total annual processing/refrigeration rmui cost for selected vessel
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+2011<em>, 2012</em>
+</td>
+<td style="text-align:left;">
+*RM and UI were asked separately for each sub cost category so they are summed to get a combined RMUI value
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+RMUI_SAFETY_EQPT_EXP
+</td>
+<td style="text-align:left;">
+NUMBER
+</td>
+<td style="text-align:left;">
+Total annual safety equipment rmui cost for selected vessel
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+2011<em>, 2012</em>
+</td>
+<td style="text-align:left;">
+*RM and UI were asked separately for each sub cost category so they are summed to get a combined RMUI value
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+UI_COST
+</td>
+<td style="text-align:left;">
+NUMBER
+</td>
+<td style="text-align:left;">
+Total summed upgrade costs (when applicable)
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+2011, 2012, 2015
+</td>
+<td style="text-align:left;">
+2011: individual cost categories provided for propulsion engine, deck equipment/other machinery, hull, fishing gear, wheelhouse and gear electronics, processing/refrigeration, safety equipment; 2012: same format/categories as 2011 plus an “other” category; 2015: asked for one total cost for all categories combine (same categories as 2011); 2022 and on: RM and UI were not asked for separately
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+RM_COST
+</td>
+<td style="text-align:left;">
+NUMBER
+</td>
+<td style="text-align:left;">
+Total summed repair and maintenance costs (when applicable, see comment)
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+2011, 2012, 2015
+</td>
+<td style="text-align:left;">
+2011: individual cost categories provided for propulsion engine, deck equipment/other machinery, hull, fishing gear, wheelhouse and gear electronics, processing/refrigeration, safety equipment. Haul-out cost asked separately; 2012: same format/categories as 2011 plus an “other” category; 2015: asked for one total cost for all categories combine (same categories as 2011). Haul-out cost not asked; 2022 and on: RM and UI were not asked for separately. Haul-out cost included as a RMUI variable.
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+RMUI_COST
+</td>
+<td style="text-align:left;">
+NUMBER
+</td>
+<td style="text-align:left;">
+Total summed upgrade and improvement and repair and maintenance costs (when applicable, see comment)
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+2011, 2012, 2015
+</td>
+<td style="text-align:left;">
+RM and UI asked separately in 2011, 2012, 2015 but can be summed by adding variables UI_COST and RM_COST.
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+MOORING_FEES
+</td>
+<td style="text-align:left;">
+NUMBER(9)
+</td>
+<td style="text-align:left;">
+Total annual mooring/dockage fees for the selected vessel
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+2011, 2012, 2015
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+PERMIT_FEES
+</td>
+<td style="text-align:left;">
+NUMBER(9)
+</td>
+<td style="text-align:left;">
+Total annual state and Federal Permits and/or License Renewal Fees for the selected vessel
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+2011, 2012, 2015
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+VES_INSURANCE_COST
+</td>
+<td style="text-align:left;">
+NUMBER(9)
+</td>
+<td style="text-align:left;">
+Vessel insurance cost of the selected vessel including premium paid for hull and/or P&amp;I insurance
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+2011, 2012, 2015
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+VES_INSURED_MONTHS
+</td>
+<td style="text-align:left;">
+NUMBER(2)
+</td>
+<td style="text-align:left;">
+Number of months selected vessel was insured
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+2011, 2012, 2015
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+FUEL_COST
+</td>
+<td style="text-align:left;">
+NUMBER
+</td>
+<td style="text-align:left;">
+Total annual fuel cost for selected vessel
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+2011, 2012
+</td>
+<td style="text-align:left;">
+Includes oil and filter for 2011 and 2012
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+Data: -99999999’s presenting
+</td>
+<td style="text-align:left;">
+x
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+BAIT_COST
+</td>
+<td style="text-align:left;">
+NUMBER
+</td>
+<td style="text-align:left;">
+Total annual bait cost for selected vessel
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+2011, 2012
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+Data: -99999999’s presenting
+</td>
+<td style="text-align:left;">
+x
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+FOOD_COST
+</td>
+<td style="text-align:left;">
+NUMBER
+</td>
+<td style="text-align:left;">
+Total annual food cost for selected vessel
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+2011, 2012
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+Data: -99999999’s presenting
+</td>
+<td style="text-align:left;">
+x
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+ICE_COST
+</td>
+<td style="text-align:left;">
+NUMBER
+</td>
+<td style="text-align:left;">
+Total annual ice cost for selected vessel
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+2011, 2012
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+Data: -99999999’s presenting
+</td>
+<td style="text-align:left;">
+x
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CATCH_HANDLING_COST
+</td>
+<td style="text-align:left;">
+NUMBER
+</td>
+<td style="text-align:left;">
+Total annual catch handling cost such as auction, lumping, grading, shipping etc. for selected vessel
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+2011, 2012
+</td>
+<td style="text-align:left;">
+2012 includes the cost of sales representatives
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+Data: -99999999’s presenting
+</td>
+<td style="text-align:left;">
+x
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CAPTAIN_STATUS
+</td>
+<td style="text-align:left;">
+VARCHAR2(30)
+</td>
+<td style="text-align:left;">
+Captain type for the majority of trips taken; (Examples: Mostly Hired Captain, Mostly Owner-operated, Split Evenly [split evenly between hired captain and owner-operated] No Trips This Year, Other)
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+2011, 2012, 2015
+</td>
+<td style="text-align:left;">
+The “split evenly” and “no trips” options were only provided in 2015 survey. 2011 and 2012 only had mostly owner-operated, mostly hired captain, and other as selection options.
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CREW_PURCHASES_DESC
+</td>
+<td style="text-align:left;">
+VARCHAR2(2000 BYTE)
+</td>
+<td style="text-align:left;">
+Other items that are purchased by crew
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+2011, 2012
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+BOAT_PCT
+</td>
+<td style="text-align:left;">
+NUMBER
+</td>
+<td style="text-align:left;">
+Boat’s percent of gross revenue if share payment system is used
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+2011, 2012, *2015
+</td>
+<td style="text-align:left;">
+*This question was asked in 2015, but the survey form did not print correctly such that no responses were recorded for this question.
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CREW_PCT
+</td>
+<td style="text-align:left;">
+NUMBER
+</td>
+<td style="text-align:left;">
+Crew percent of gross revenues if share payment system is used
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+2011, 2012, *2015
+</td>
+<td style="text-align:left;">
+*This question was asked in 2015, but the survey form did not print correctly such that no responses were recorded for this question.
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CAPTAIN_PCT
+</td>
+<td style="text-align:left;">
+NUMBER
+</td>
+<td style="text-align:left;">
+Hired captain’s percent of gross revenues if share payment system is used
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+2011, 2012, *2015
+</td>
+<td style="text-align:left;">
+*This question was asked in 2015, but the survey form did not print correctly such that no responses were recorded for this question.
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+QUOTA_DAS_PYMTS
+</td>
+<td style="text-align:left;">
+NUMBER
+</td>
+<td style="text-align:left;">
+Quota or DAS lease-in costs including estimated value of non-monetary payments
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+2011, 2012, 2015
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+x
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+VESSEL_COST
+</td>
+<td style="text-align:left;">
+NUMBER
+</td>
+<td style="text-align:left;">
+Total summed costs from the vessel expense section - mooring fees, permit fees, vessel insurance cost, vessel or permit payments for the selected vessel
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+2011, 2012, 2015
+</td>
+<td style="text-align:left;">
+Overhead costs were calculated at the vessel-level for 2012 and 2015 (divided by the number of vessels owned) but apportioned by the respondent in 2011
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+BUSINESS_TRAVEL_COST
+</td>
+<td style="text-align:left;">
+NUMBER
+</td>
+<td style="text-align:left;">
+Total annual business travel cost such as business associated lodging, travel, and transportation with the selected vessel
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+2011, 2012, 2015
+</td>
+<td style="text-align:left;">
+Overhead costs were calculated at the vessel-level for 2012 and 2015 (divided by the number of vessels owned) but apportioned by the respondent in 2011
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+VEHICLE_USAGE_COST
+</td>
+<td style="text-align:left;">
+NUMBER
+</td>
+<td style="text-align:left;">
+Total annual business vehicle usage costs apportioned to the selected vessel
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+2011, 2012, 2015
+</td>
+<td style="text-align:left;">
+Overhead costs were calculated at the vessel-level for 2012 and 2015 (divided by the number of vessels owned) but apportioned by the respondent in 2011
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+ASSOCIATION_FEES
+</td>
+<td style="text-align:left;">
+NUMBER
+</td>
+<td style="text-align:left;">
+Association fees paid including fishing organization, sector fees, and union dues for the selected vessel
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+2011, 2012, 2015
+</td>
+<td style="text-align:left;">
+Overhead costs were calculated at the vessel-level for 2012 and 2015 (divided by the number of vessels owned) but apportioned by the respondent in 2011
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+PROFESSIONAL_FEES
+</td>
+<td style="text-align:left;">
+NUMBER
+</td>
+<td style="text-align:left;">
+Professional fees paid including settlement, legal and accounting apportioned to the selected vessel
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+2011, 2012, 2015
+</td>
+<td style="text-align:left;">
+Overhead costs were calculated at the vessel-level for 2012 and 2015 (divided by the number of vessels owned) but apportioned by the respondent in 2011
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+VESSEL_OR_PERMIT_PYMTS
+</td>
+<td style="text-align:left;">
+NUMBER
+</td>
+<td style="text-align:left;">
+Vessel/permit/business loan payments made in the respective year, see notes for more information.
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+2011, 2012, 2015
+</td>
+<td style="text-align:left;">
+In 2011, 2012 and 2015, this variable includes principal paid on business loans and Interest paid on business loans (apportioned by vessel by dividing by the number of owned vessels for 2012 and 2015). Overhead costs were calculated at the vessel-level for 2012 and 2015 (divided by the number of vessels owned) but apportioned by the respondent in 2015.
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+QUOTA_MONITORING_COST
+</td>
+<td style="text-align:left;">
+NUMBER(9)
+</td>
+<td style="text-align:left;">
+Total quota monitoring costs (observer or dockside monitoring costs) for the selected vessel
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+2011, 2012, 2015
+</td>
+<td style="text-align:left;">
+Overhead costs were calculated at the vessel-level for 2012 and 2015 (divided by the number of vessels owned) but apportioned by the respondent in 2011
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+ADVERTISING_COST
+</td>
+<td style="text-align:left;">
+NUMBER
+</td>
+<td style="text-align:left;">
+Total annual advertising costs for the selected vessel
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+2011, 2012, 2015
+</td>
+<td style="text-align:left;">
+Overhead costs were calculated at the vessel-level for 2012 and 2015 (divided by the number of vessels owned) but apportioned by the respondent in 2011
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+COMMUNICATION_COST
+</td>
+<td style="text-align:left;">
+NUMBER
+</td>
+<td style="text-align:left;">
+Total annual communications costs for the selected vessel
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+2011, 2012
+</td>
+<td style="text-align:left;">
+Overhead costs were calculated at the vessel-level for 2012 and 2015 (divided by the number of vessels owned) but apportioned by the respondent in 2011
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+OFFICE_EXP
+</td>
+<td style="text-align:left;">
+NUMBER
+</td>
+<td style="text-align:left;">
+Total annual office/workshop/storage expenses apportioned to the selected vessel
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+2011, 2012, 2015
+</td>
+<td style="text-align:left;">
+SHOP_EXP and OFFICE_EXP variables were combined for survey years 2011 and 2012 to generate this variable for those years. In 2015, workshop or office expenses were not collected.Overhead costs were calculated at the vessel-level for 2012 and 2015 (divided by the number of vessels owned) but apportioned by the respondent in 2011
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NONCREW_LABOR_COST
+</td>
+<td style="text-align:left;">
+NUMBER
+</td>
+<td style="text-align:left;">
+Total annual payment made for non-crew labor including payments to accountants, office administrative
+assistants, bookkeepers, and night watchmen apportioned to selected vessel
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+2011, 2012, 2015
+</td>
+<td style="text-align:left;">
+Overhead costs were calculated at the vessel-level for 2012 and 2015 (divided by the number of vessels owned) but apportioned by the respondent in 2011
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+OVERHEAD_COST
+</td>
+<td style="text-align:left;">
+NUMBER
+</td>
+<td style="text-align:left;">
+Total summed overhead costs - Business Vehicle Usage Costs
+Business Travel Costs, Association Fees Paid, Professional Fees Paid, Advertising Costs, Communications Costs, Office/Shop Expenses, Non-crew Labor Payments
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+2011, 2012, 2015
+</td>
+<td style="text-align:left;">
+Overhead costs were calculated at the vessel-level for 2012 and 2015 (divided by the number of vessels owned) but apportioned by the respondent in 2011
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+Data: some answers have very long decimals
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CREW_PYMTS
+</td>
+<td style="text-align:left;">
+NUMBER(9)
+</td>
+<td style="text-align:left;">
+Total annual payment to crew for selected vessel
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+2012, 2015
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CREW_BENEFITS_VAL
+</td>
+<td style="text-align:left;">
+NUMBER(9)
+</td>
+<td style="text-align:left;">
+Total amount paid in benefits to crew and hired captain on the selected vessel
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+2011, 2012, 2015
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CAPTAIN_PYMTS
+</td>
+<td style="text-align:left;">
+NUMBER
+</td>
+<td style="text-align:left;">
+Total annual payment to hired captains for selected vessel
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+2012, 2015
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+ALL_CREW_CAPT_PYMTS
+</td>
+<td style="text-align:left;">
+NUMBER
+</td>
+<td style="text-align:left;">
+Summed crew and hired captain payments
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+2011, 2012<em>, 2015</em>
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+VESSELS_NUM
+</td>
+<td style="text-align:left;">
+NUMBER
+</td>
+<td style="text-align:left;">
+Number of vessels operated or maintained for fishing business
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+2012, 2015
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+LEASING_QUOTA_REVENUE
+</td>
+<td style="text-align:left;">
+NUMBER
+</td>
+<td style="text-align:left;">
+Total revenue received from leasing out quota or DAS
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+2015
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+x
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+TOTAL_OTHR_VES_COST
+</td>
+<td style="text-align:left;">
+NUMBER
+</td>
+<td style="text-align:left;">
+Total sum of other costs incurred by the selected vessel not inquired about in the survey
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+2011, 2012, 2015
+</td>
+<td style="text-align:left;">
+Includes: OTHR_VES_COST1 OTHR_VES_COST2 from 2011, OTHR_VES_COST1 OTHR_VES_COST2 from 2012 and OTHER_VESSEL_COST from 2015
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+TOTAL_OTHR_BUS_COST
+</td>
+<td style="text-align:left;">
+NUMBER
+</td>
+<td style="text-align:left;">
+Total amount of other costs incurred by the entire fishing business not inquired about in the survey
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+2012, 2015
+</td>
+<td style="text-align:left;">
+Includes OTHR_BUS_COST1, OTHR_BUS_COST2 from 2012 and OTHER_BUSINESS_COST from 2015
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+x
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+WATER_COST
+</td>
+<td style="text-align:left;">
+NUMBER
+</td>
+<td style="text-align:left;">
+Total annual fresh water costs for the selected vessel
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+2011, 2012
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+Data: -99999999’s presenting
+</td>
+<td style="text-align:left;">
+x
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+FISHING_SPLY_COST
+</td>
+<td style="text-align:left;">
+NUMBER
+</td>
+<td style="text-align:left;">
+Total annual cost for general fishing supplies such as knives, picks, hooks, boxes, bags, ties, lobster bands, rags,
+tape, links/rings, lines/twine etc.
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+2011, 2012
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+Data: -99999999’s presenting
+</td>
+<td style="text-align:left;">
+x
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CREW_SPLY_COST
+</td>
+<td style="text-align:left;">
+NUMBER
+</td>
+<td style="text-align:left;">
+Total annual cost for general crew supplies such as gloves, boot liners, foul weather gear etc.
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+2011, 2012
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+Data: -99999999’s presenting
+</td>
+<td style="text-align:left;">
+x
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+OTHER_OPERATING_COST
+</td>
+<td style="text-align:left;">
+NUMBER
+</td>
+<td style="text-align:left;">
+Other annual operating costs not collected in the survey
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+2011, 2012
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+Data: -99999999’s presenting
+</td>
+<td style="text-align:left;">
+x
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CREW_SIZE
+</td>
+<td style="text-align:left;">
+NUMBER(4)
+</td>
+<td style="text-align:left;">
+Average size of the crew excluding the captain in terms of crew members
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+2011, 2012, 2015
+</td>
+<td style="text-align:left;">
+In 2011 it was not stated in the directions to exclude the owner/self in the average crew size count, but it was specified in 2012 and 2015.
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+GROSS_REV_EXPENSES_DESC
+</td>
+<td style="text-align:left;">
+VARCHAR2(4000)
+</td>
+<td style="text-align:left;">
+Type of expenses that are deducted from gross revenue
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+2011, 2012
+</td>
+<td style="text-align:left;">
+Question does not answer if theses expenses are paid by the crew or boat
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CREW_EXP_DEDUCTED_DESC
+</td>
+<td style="text-align:left;">
+VARCHAR2(2000)
+</td>
+<td style="text-align:left;">
+Type of expenses deducted from the crews payment
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+2011, 2012
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CAPT_EXP_DEDUCTED_DESC
+</td>
+<td style="text-align:left;">
+VARCHAR2(2000)
+</td>
+<td style="text-align:left;">
+Type of expenses deducted from the captain’s payment
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+2011, 2012
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CREWPAY_OTHER
+</td>
+<td style="text-align:left;">
+VARCHAR2(2000)
+</td>
+<td style="text-align:left;">
+Description of alternative crew payment system, if the share system was not appropriate
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+2011, 2012
+</td>
+<td style="text-align:left;">
+In 2015, there is the a question asking to describe the flat rate system if a share system was not used rather than an open ended question of any alternative payment system which it is not included here.
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+PERSONAL_HEALTH_INS
+</td>
+<td style="text-align:left;">
+VARCHAR2(10)
+</td>
+<td style="text-align:left;">
+Personal health insurance: Yes- yes, I have personal health insurance, No- no I don’t have health insurance, Spouse- no I am covered by my spouse’s plan, Other
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+2011, 2012, *2015
+</td>
+<td style="text-align:left;">
+No “other” option was presented in 2011.
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+Data: Other/other, Spouse/spouse, No/no, Yes/yes options need to be consistent– Already noted for Tanya
+</td>
+<td style="text-align:left;">
+x
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+PERSONAL_HEALTH_INS_COST
+</td>
+<td style="text-align:left;">
+NUMBER(9)
+</td>
+<td style="text-align:left;">
+Cost participant did have personal health insurance
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+2011, 2012, 2015
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+VESSEL_INACTIVE_FLAG
+</td>
+<td style="text-align:left;">
+NUMBER
+</td>
+<td style="text-align:left;">
+Vessel was inactive 1= Inactive 0 = active
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+2012, 2015
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+x
+</td>
+</tr>
+</tbody>
+</table>
 </div>
-<div id="holder-1" class="section level2 hasAnchor" number="2.2">
-<h2><span class="header-section-number">2.2</span> Holder<a href="tables-and-views.html#holder-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+</div>
+<div id="holder" class="section level2 hasAnchor" number="2.2">
+<h2><span class="header-section-number">2.2</span> Holder<a href="tables-and-views.html#holder" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 
 </div>
 </div>
@@ -292,20 +4794,6 @@ gitbook.start({
 });
 </script>
 
-<!-- dynamically load mathjax for compatibility with self-contained -->
-<script>
-  (function () {
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    var src = "true";
-    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
-    if (location.protocol !== "file:")
-      if (/^https?:/.test(src))
-        src = src.replace(/^https?:/, '');
-    script.src = src;
-    document.getElementsByTagName("head")[0].appendChild(script);
-  })();
-</script>
 </body>
 
 </html>
