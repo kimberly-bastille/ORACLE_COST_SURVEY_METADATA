@@ -1,6 +1,6 @@
 --- 
 title: "Oracle Cost Survey Metadata "
-author: "Samantha Werner, Gregory Ardini & Elizabeth Conley"
+author: "Samantha Werner, Gregory Ardini, Elizabeth Conley and Tanya Noteva"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 documentclass: book
@@ -29,8 +29,8 @@ Data confidentiality is of the utmost important, given the trust issues between 
 Data users must be aware of the restrictions with handling Personally Identifiable Information (PII). As a reminder, data cannot be shared through email and must follow the rule of three to protect confidentiality. Data cannot be shared without notifying cost working group staff and obtaining a singed NDA. 
 For any questions or more on the confidentiality of the cost survey data, please contact Samantha Werner (Samantha.Werner@noaa.gov) and Gregory Ardini (Gregory.Ardini@noaa.gov).
 
-
-
+## Contacts    
+For questions regarding, the metadata, the Oracle databases(including access), or suggestions, please contact Samantha Werner (Samantha.Werner@noaa.gov) 
 
 ```{r include=FALSE}
 # automatically create a bib database for R packages
