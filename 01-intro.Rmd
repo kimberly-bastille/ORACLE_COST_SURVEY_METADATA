@@ -1,36 +1,13 @@
-# Tables and Views 
+# Tables and Views
 
 
+## VCS_COMMON_VARAIBLES_MV
 
-## VCS_COMMON_VARIABLES_MV
+**Description:** This view presents common variables collected from the cost survey over time. Values are presented at the annual vessel-level for the year in which they were queried unless otherwise noted (nominal dollars). To be considered a common variable, the variable must appear in two or more cost surveys over time. Given that the survey instrument changed over time, there may be slight discrepancies in the variable over time. Please see the comments for further clarification. 
 
-This view presents common variables collected from the cost survey over time. Values are presented at the annual vessel-level for the year in which they were queried unless otherwise noted (nominal dollars). To be considered a common variable, the variable must appear in two or more cost surveys over time. Given that the survey instrument changed over time, there may be slight discrepancies in the variable over time. Please see the comments for further clarification. 
+**Data warnings:** Crew_Pymts in this year contains both crew and captain payments. Captain_Pymts is null but retained for the cost data application reasons. 
 
-
-
-```{r chunck 1 }
-knitr::kable(
-  mtcars[1:5, ],"html",
-  caption = "A knitr kable.")
-```
-
-```{r chunck 2, echo = FALSE, warning = FALSE, message = FALSE }
-library(dplyr)
-library(dbplyr)
-library(readxl)
-library(tidyverse)
-library(knitr)
-
-setwd("C:/Users/samantha.l.werner/Desktop/Github/ORACLE_COST_SURVEY_METADATA/ORACLE_COST_SURVEY_METADATA/data")
-
-VCS_Common_Vars <- read_excel("ORACLE_METADATA.xlsx", sheet = "VCS_COMMON_VARIABLES_MV") 
-
-COMVAR<-VCS_Common_Vars
-knitr::kable(COMVAR[1:72, ], "html", longtable = TRUE,booktabs = TRUE, caption = "Table 2") 
-```
-
-
-```{r chunck 3, echo = FALSE, warning = FALSE, message = FALSE }
+```{r chunck 1, echo = FALSE, warning = FALSE, message = FALSE }
 library(dplyr)
 library(dbplyr)
 library(readxl)
@@ -44,17 +21,96 @@ VCS_Common_Vars <- read_excel("ORACLE_METADATA.xlsx", sheet = "VCS_COMMON_VARIAB
 
 COMVAR<-VCS_Common_Vars
 #COMVAR %>%
-  kbl(COMVAR, "html", caption = 'Table option 3') %>%
+  kbl(COMVAR, "html", caption = 'VCS_COMMON_VARIABLES_MV METADATA') %>%
  kable_styling(bootstrap_options = c("striped", "hover")) %>%
-  scroll_box(width = "500px", height = "200px")
+  scroll_box(width = "1000px", height = "500px")
+```
+
+
+## VCS_COST2011
+
+**Description:** This view presents common variables collected from the cost survey over time. Values are presented at the annual vessel-level for the year in which they were queried unless otherwise noted (nominal dollars). To be considered a common variable, the variable must appear in two or more cost surveys over time. Given that the survey instrument changed over time, there may be slight discrepancies in the variable over time. Please see the comments for further clarification. 
+
+**Data warnings:** Crew_Pymts in this year contains both crew and captain payments. Captain_Pymts is null but retained for the cost data application reasons. 
+
+
+
+```{r chunck 2, echo = FALSE, warning = FALSE, message = FALSE }
+library(dplyr)
+library(dbplyr)
+library(readxl)
+library(tidyverse)
+library(knitr)
+library(kableExtra)
+
+setwd("C:/Users/samantha.l.werner/Desktop/Github/ORACLE_COST_SURVEY_METADATA/ORACLE_COST_SURVEY_METADATA/data")
+
+VCS_COST2011 <- read_excel("ORACLE_METADATA.xlsx", sheet = "VCS_COST2011") 
+
+cost2011<-VCS_COST2011
+#COMVAR %>%
+  kbl(cost2011, "html", caption = 'VCS_COST2011 METADATA') %>%
+ kable_styling(bootstrap_options = c("striped", "hover")) %>%
+  scroll_box(width = "1000px", height = "500px")
 ```
 
 
 
 
+## VCS_COST2012
+
+**Description:** This is the cleaned data collected from the SSB 2012 cost survey. The costs were mostly at the vessel-level, however, some business-level costs which are described in the data warnings section. The data has been cleaned as described in the Cost Survey Tech Memo.  All costs are presented in nominal dollars. 
+
+**Data Warnings:** All overhead cost variables are collected for all vessels rather than the vessel-level. This includes the following variables:  SHOP_EXP , OFFICE_EXP , VEHICLE_USAGE_COST , BUSINESS_TRAVEL_COST, ASSOCIATION_FEES , PROFESSIONAL_FEES, BUS_LOAN_PRINCIPAL_COST, BUS_LOAN_INTEREST_COST, ADVERTISING_COST , and  NONCREW_LABOR_COST
 
 
 
+```{r chunck 3, echo = FALSE, warning = FALSE, message = FALSE }
+library(dplyr)
+library(dbplyr)
+library(readxl)
+library(tidyverse)
+library(knitr)
+library(kableExtra)
 
-## Holder 
+setwd("C:/Users/samantha.l.werner/Desktop/Github/ORACLE_COST_SURVEY_METADATA/ORACLE_COST_SURVEY_METADATA/data")
+
+VCS_COST2012 <- read_excel("ORACLE_METADATA.xlsx", sheet = "VCS_COST2012") 
+
+cost2012<-VCS_COST2012
+#COMVAR %>%
+  kbl(cost2012, "html", caption ='VCS_COST2012 METADATA') %>%
+ kable_styling(bootstrap_options = c("striped", "hover")) %>%
+  scroll_box(width = "1000px", height = "500px")
+```
+
+
+
+## VCS_COST2015
+
+**Description:** This is the cleaned data collected from the SSB 2015 cost survey. The costs collected at the vessel or business-level which will be described in the comments section. Note that variable names may change over time such that office_exp could be for all vessels in one year and the selected vessel in another. The data has been cleaned as described in the Cost Survey Tech Memo.  All costs are presented in nominal dollars. 
+
+**Data Warnings:** All overhead cost variables are collected for all vessels rather than the vessel-level.There may be some variables not included here that are in the survey because there were no responses provided in the dataset. 
+
+
+
+```{r chunck 4, echo = FALSE, warning = FALSE, message = FALSE }
+library(dplyr)
+library(dbplyr)
+library(readxl)
+library(tidyverse)
+library(knitr)
+library(kableExtra)
+
+setwd("C:/Users/samantha.l.werner/Desktop/Github/ORACLE_COST_SURVEY_METADATA/ORACLE_COST_SURVEY_METADATA/data")
+
+VCS_COST2015 <- read_excel("ORACLE_METADATA.xlsx", sheet = "VCS_COST2015") 
+
+cost2015<-VCS_COST2015
+#COMVAR %>%
+  kbl(cost2015, "html", caption ='VCS_COST2015 METADATA') %>%
+ kable_styling(bootstrap_options = c("striped", "hover")) %>%
+  scroll_box(width = "1000px", height = "500px")
+```
+
 
