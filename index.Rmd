@@ -17,20 +17,19 @@ github-repo: rstudio/bookdown-demo
 
 # Overview 
 
-Background info will go here _sample_  **bold**.  $a^2 + b^2 = c^2$.
+This website serves as the official metadata for the SSB cost survey data, databased on Oracle. 
+Currenlty survey data from years 2011, 2012, 2015 are databased on Oracle. 
 
-## Cost Survey Data 
+## SSB Cost Survey  
+The Greater Atlantic Region Commercial Fishing Business Cost Survey (commercial fishing cost survey or cost survey for short) is a voluntary cost survey of federally permitted vessel owners in the New England and Mid-Atlantic region of the United States. Two main goals of the survey are to collect fixed and quasi-fixed cost information to generate vessel-level profitability estimates, as well as track economic performance over time to inform management decisions. The survey has been implemented intermittently since 2006. 
 
 ## Confidentiality  
 
+Data confidentiality is of the utmost important, given the trust issues between industry and NOAA Fisheries. Each individual that accesses the cost data must have a signed non-disclosure agreement which specifies the cost data by name.
+Data users must be aware of the restrictions with handling Personally Identifiable Information (PII). As a reminder, data cannot be shared through email and must follow the rule of three to protect confidentiality. Data cannot be shared without notifying cost working group staff and obtaining a singed NDA. 
+For any questions or more on the confidentiality of the cost survey data, please contact Samantha Werner (Samantha.Werner@noaa.gov) and Gregory Ardini (Gregory.Ardini@noaa.gov).
 
 
-
-As you work, you may start a local server to live preview this HTML book. This preview will update as you edit the book when you save individual .Rmd files. You can start the server in a work session by using the RStudio add-in "Preview book", or from the R console:
-
-```{r eval=FALSE}
-bookdown::serve_book()
-```
 
 
 ```{r include=FALSE}
