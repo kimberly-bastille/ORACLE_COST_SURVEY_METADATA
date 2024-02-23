@@ -1,15 +1,15 @@
 --- 
-title: "Oracle Cost Survey Metadata "
+title: 'Oracle Cost Survey Metadata '
 author: "Samantha Werner, Gregory Ardini, Elizabeth Conley and Tanya Noteva"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 documentclass: book
-bibliography: [book.bib, packages.bib]
+bibliography:
+- book.bib
+- packages.bib
 url: https://swerner2.github.io/ORACLE_COST_SURVEY_METADATA/
-
-description: |
-  This website serves as the official metadata for the SSB cost survey data, databased on Oracle. 
-  
+description: "This website serves as the official metadata for the SSB cost survey
+  data, databased on Oracle. \n"
 link-citations: yes
 github-repo: https://github.com/SWerner2/ORACLE_COST_SURVEY_METADATA
 ---
