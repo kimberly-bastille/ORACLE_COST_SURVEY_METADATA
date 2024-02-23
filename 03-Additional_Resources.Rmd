@@ -9,7 +9,7 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-# R Additional Resources 
+# Additional Resources 
 
 Cost data visualization tool https://apps-nefsc.fisheries.noaa.gov/socialsci/cost-data/
 
