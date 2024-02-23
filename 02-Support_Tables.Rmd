@@ -1,0 +1,232 @@
+
+# Support Tables
+
+Here are additional support (aka look-up) tables when using the 2011, 2012, 2015 cost tables. 
+
+
+## VCS_CAPTAIN_STATUS
+
+```{r chunck 1, echo = FALSE, warning = FALSE, message = FALSE }
+library(dplyr)
+library(dbplyr)
+library(readxl)
+library(tidyverse)
+library(knitr)
+library(kableExtra)
+
+setwd("C:/Users/samantha.l.werner/Desktop/Github/ORACLE_COST_SURVEY_METADATA/ORACLE_COST_SURVEY_METADATA/data")
+
+capt_status <- read_excel("Support.xlsx", sheet = "VCS_CAPTAIN_STATUS") 
+
+capt<-capt_status
+#COMVAR %>%
+  kbl(capt, "html", caption ='VCS_CAPTAIN_STATUS') %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed", full_width=F)) %>%
+  scroll_box(width = "600px", height = "300px")
+```
+
+## VCS_GEARS
+
+```{r chunck 2, echo = FALSE, warning = FALSE, message = FALSE }
+library(dplyr)
+library(dbplyr)
+library(readxl)
+library(tidyverse)
+library(knitr)
+library(kableExtra)
+
+setwd("C:/Users/samantha.l.werner/Desktop/Github/ORACLE_COST_SURVEY_METADATA/ORACLE_COST_SURVEY_METADATA/data")
+
+GEARS <- read_excel("Support.xlsx", sheet = "VCS_GEARS") 
+
+gear<-GEARS
+#COMVAR %>%
+  kbl(gear, "html", caption ='VCS_GEARS') %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed", full_width=F)) %>%
+  scroll_box(width = "600px", height = "300px")
+```
+
+
+
+## VCS_INFO_SOURCE
+
+```{r chunck 3, echo = FALSE, warning = FALSE, message = FALSE }
+library(dplyr)
+library(dbplyr)
+library(readxl)
+library(tidyverse)
+library(knitr)
+library(kableExtra)
+
+setwd("C:/Users/samantha.l.werner/Desktop/Github/ORACLE_COST_SURVEY_METADATA/ORACLE_COST_SURVEY_METADATA/data")
+
+VCS_INFO_SOURCE <- read_excel("Support.xlsx", sheet = "VCS_INFO_SOURCE") 
+
+INFO<-VCS_INFO_SOURCE
+#COMVAR %>%
+  kbl(INFO, "html", caption ='VCS_INFO_SOURCE') %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed", full_width=F)) %>%
+  scroll_box(width = "600px", height = "300px")
+```
+## VCS_CREW_PAYMENT_SYSTEMS
+
+```{r chunck 4, echo = FALSE, warning = FALSE, message = FALSE }
+library(dplyr)
+library(dbplyr)
+library(readxl)
+library(tidyverse)
+library(knitr)
+library(kableExtra)
+
+setwd("C:/Users/samantha.l.werner/Desktop/Github/ORACLE_COST_SURVEY_METADATA/ORACLE_COST_SURVEY_METADATA/data")
+
+VCS_CREW_PAYMENT_SYSTEMS<- read_excel("Support.xlsx", sheet = "VCS_CREW_PAYMENT_SYSTEMS") 
+
+CREW<-VCS_CREW_PAYMENT_SYSTEMS
+#COMVAR %>%
+  kbl(CREW, "html", caption ='VCS_CREW_PAYMENT_SYSTEMS') %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed", full_width=F)) %>%
+  scroll_box(width = "600px", height = "300px")
+```
+
+## VCS_STATUS_OPTIONS
+
+```{r chunck 5, echo = FALSE, warning = FALSE, message = FALSE }
+library(dplyr)
+library(dbplyr)
+library(readxl)
+library(tidyverse)
+library(knitr)
+library(kableExtra)
+
+setwd("C:/Users/samantha.l.werner/Desktop/Github/ORACLE_COST_SURVEY_METADATA/ORACLE_COST_SURVEY_METADATA/data")
+
+VCS_STATUS_OPTIONS<- read_excel("Support.xlsx", sheet = "VCS_STATUS_OPTIONS") 
+
+STATUS<-VCS_STATUS_OPTIONS
+#COMVAR %>%
+  kbl(STATUS, "html", caption ='VCS_STATUS_OPTIONS') %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed", full_width=F)) %>%
+  scroll_box(width = "600px", height = "300px")
+```
+
+
+## VCS_SURVEY_DETAILS
+
+```{r chunck 6, echo = FALSE, warning = FALSE, message = FALSE }
+library(dplyr)
+library(dbplyr)
+library(readxl)
+library(tidyverse)
+library(knitr)
+library(kableExtra)
+
+setwd("C:/Users/samantha.l.werner/Desktop/Github/ORACLE_COST_SURVEY_METADATA/ORACLE_COST_SURVEY_METADATA/data")
+
+VCS_SURVEY_DETAILS<- read_excel("Support.xlsx", sheet = "VCS_SURVEY_DETAILS") 
+
+SURVEY<-VCS_SURVEY_DETAILS
+#COMVAR %>%
+  kbl(SURVEY, "html", caption ='VCS_SURVEY_DETAILS') %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed", full_width=F)) %>%
+  scroll_box(width = "600px", height = "300px")
+```
+
+
+
+
+## VCS_COST_CATEGORIES
+
+```{r chunck 7, echo = FALSE, warning = FALSE, message = FALSE }
+library(dplyr)
+library(dbplyr)
+library(readxl)
+library(tidyverse)
+library(knitr)
+library(kableExtra)
+
+setwd("C:/Users/samantha.l.werner/Desktop/Github/ORACLE_COST_SURVEY_METADATA/ORACLE_COST_SURVEY_METADATA/data")
+
+VCS_COST_CATEGORIES<- read_excel("Support.xlsx", sheet = "VCS_COST_CATEGORIES") 
+
+CATS<-VCS_COST_CATEGORIES
+#COMVAR %>%
+  kbl(CATS, "html", caption ='VCS_COST_CATEGORIES') %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed", full_width=F)) %>%
+  scroll_box(width = "600px", height = "300px")
+```
+
+
+## VCS_COST_CATEGORIES
+
+```{r chunck 8, echo = FALSE, warning = FALSE, message = FALSE }
+library(dplyr)
+library(dbplyr)
+library(readxl)
+library(tidyverse)
+library(knitr)
+library(kableExtra)
+
+setwd("C:/Users/samantha.l.werner/Desktop/Github/ORACLE_COST_SURVEY_METADATA/ORACLE_COST_SURVEY_METADATA/data")
+
+COST_APP<- read_excel("Support.xlsx", sheet = "costapp") 
+
+APP<-COST_APP
+#COMVAR %>%
+  kbl(APP, "html", caption ='Tables only used in Cost Application') %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed", full_width=F)) %>%
+  scroll_box(width = "600px", height = "300px")
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

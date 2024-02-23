@@ -34,3 +34,12 @@ contacts
 section
 url-httpsswerner2.github.iooracle_cost_survey_metadata
 additional-info
+support-tables
+vcs_captain_status
+vcs_gears
+vcs_info_source
+vcs_crew_payment_systems
+vcs_status_options
+vcs_survey_details
+vcs_cost_categories
+vcs_cost_categories-1

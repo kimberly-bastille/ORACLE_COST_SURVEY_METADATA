@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 3 Support Tables | Oracle Cost Survey Metadata</title>
+  <meta name="description" content="This website serves as the official metadata for the SSB cost survey data, databased on Oracle." />
+  <meta name="generator" content="bookdown 0.37 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 3 Support Tables | Oracle Cost Survey Metadata" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="This website serves as the official metadata for the SSB cost survey data, databased on Oracle." />
+  <meta name="github-repo" content="https://github.com/SWerner2/ORACLE_COST_SURVEY_METADATA" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 3 Support Tables | Oracle Cost Survey Metadata" />
+  
+  <meta name="twitter:description" content="This website serves as the official metadata for the SSB cost survey data, databased on Oracle." />
+  
+
+<meta name="author" content="Samantha Werner, Gregory Ardini, Elizabeth Conley and Tanya Noteva" />
+
+
+<meta name="date" content="2024-02-23" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="tables-and-views.html"/>
+<link rel="next" href="additional-info.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">A Minimal Book Example</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> url: https://swerner2.github.io/ORACLE_COST_SURVEY_METADATA/</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#ssb-cost-survey"><i class="fa fa-check"></i><b>1.1</b> SSB Cost Survey</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#confidentiality"><i class="fa fa-check"></i><b>1.2</b> Confidentiality</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#contacts"><i class="fa fa-check"></i><b>1.3</b> Contacts</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="tables-and-views.html"><a href="tables-and-views.html"><i class="fa fa-check"></i><b>2</b> Tables and Views</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="tables-and-views.html"><a href="tables-and-views.html#vcs_common_varaibles_mv"><i class="fa fa-check"></i><b>2.1</b> VCS_COMMON_VARAIBLES_MV</a></li>
+<li class="chapter" data-level="2.2" data-path="tables-and-views.html"><a href="tables-and-views.html#vcs_cost2011"><i class="fa fa-check"></i><b>2.2</b> VCS_COST2011</a></li>
+<li class="chapter" data-level="2.3" data-path="tables-and-views.html"><a href="tables-and-views.html#vcs_cost2012"><i class="fa fa-check"></i><b>2.3</b> VCS_COST2012</a></li>
+<li class="chapter" data-level="2.4" data-path="tables-and-views.html"><a href="tables-and-views.html#vcs_cost2015"><i class="fa fa-check"></i><b>2.4</b> VCS_COST2015</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="support-tables.html"><a href="support-tables.html"><i class="fa fa-check"></i><b>3</b> Support Tables</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="support-tables.html"><a href="support-tables.html#vcs_captain_status"><i class="fa fa-check"></i><b>3.1</b> VCS_CAPTAIN_STATUS</a></li>
+<li class="chapter" data-level="3.2" data-path="support-tables.html"><a href="support-tables.html#vcs_gears"><i class="fa fa-check"></i><b>3.2</b> VCS_GEARS</a></li>
+<li class="chapter" data-level="3.3" data-path="support-tables.html"><a href="support-tables.html#vcs_info_source"><i class="fa fa-check"></i><b>3.3</b> VCS_INFO_SOURCE</a></li>
+<li class="chapter" data-level="3.4" data-path="support-tables.html"><a href="support-tables.html#vcs_crew_payment_systems"><i class="fa fa-check"></i><b>3.4</b> VCS_CREW_PAYMENT_SYSTEMS</a></li>
+<li class="chapter" data-level="3.5" data-path="support-tables.html"><a href="support-tables.html#vcs_status_options"><i class="fa fa-check"></i><b>3.5</b> VCS_STATUS_OPTIONS</a></li>
+<li class="chapter" data-level="3.6" data-path="support-tables.html"><a href="support-tables.html#vcs_survey_details"><i class="fa fa-check"></i><b>3.6</b> VCS_SURVEY_DETAILS</a></li>
+<li class="chapter" data-level="3.7" data-path="support-tables.html"><a href="support-tables.html#vcs_cost_categories"><i class="fa fa-check"></i><b>3.7</b> VCS_COST_CATEGORIES</a></li>
+<li class="chapter" data-level="3.8" data-path="support-tables.html"><a href="support-tables.html#vcs_cost_categories-1"><i class="fa fa-check"></i><b>3.8</b> VCS_COST_CATEGORIES</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="additional-info.html"><a href="additional-info.html"><i class="fa fa-check"></i><b>4</b> Additional Info</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Oracle Cost Survey Metadata</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="support-tables" class="section level1 hasAnchor" number="3">
+<h1><span class="header-section-number">Chapter 3</span> Support Tables<a href="support-tables.html#support-tables" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Here are additional support (aka look-up) tables when using the 2011, 2012, 2015 cost tables.</p>
+<div id="vcs_captain_status" class="section level2 hasAnchor" number="3.1">
+<h2><span class="header-section-number">3.1</span> VCS_CAPTAIN_STATUS<a href="support-tables.html#vcs_captain_status" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div style="border: 1px solid #ddd; padding: 0px; overflow-y: scroll; height:300px; overflow-x: scroll; width:600px; ">
+<table class="table table-striped table-hover table-condensed" style="margin-left: auto; margin-right: auto;">
+<caption>
+(#tab:chunck 1)VCS_CAPTAIN_STATUS
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+Variable Name
+</th>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+Type
+</th>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+Description
+</th>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+Nullable
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+CAPTAIN_STATUS_ID
+</td>
+<td style="text-align:left;">
+NUMBER(1,0)
+</td>
+<td style="text-align:left;">
+Numeric ID used to link to the CAPTAIN_STATUS_DESC variable
+</td>
+<td style="text-align:left;">
+No
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CAPTAIN_STATUS_DESC
+</td>
+<td style="text-align:left;">
+VARCHAR2(30 BYTE)
+</td>
+<td style="text-align:left;">
+Written description of who was the captian of the majority of trips (Mostly Hired Captain
+Mostly Owner-operated , Split Evenly, No Trips This Year, Other)
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="vcs_gears" class="section level2 hasAnchor" number="3.2">
+<h2><span class="header-section-number">3.2</span> VCS_GEARS<a href="support-tables.html#vcs_gears" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div style="border: 1px solid #ddd; padding: 0px; overflow-y: scroll; height:300px; overflow-x: scroll; width:600px; ">
+<table class="table table-striped table-hover table-condensed" style="margin-left: auto; margin-right: auto;">
+<caption>
+(#tab:chunck 2)VCS_GEARS
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+Variable Name
+</th>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+Type
+</th>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+Description
+</th>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+Nullable
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+GEAR_CODE
+</td>
+<td style="text-align:left;">
+VARCHAR2(6 BYTE)
+</td>
+<td style="text-align:left;">
+Combination between ACCSP_GEAR_CODE and gear abrevieation
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+SURVEY_GEAR_GROUP
+</td>
+<td style="text-align:left;">
+VARCHAR2(100 BYTE)
+</td>
+<td style="text-align:left;">
+Gear group defined for the survey based on the majority of revenues earned in the year queried by the vessel.
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NEGEAR
+</td>
+<td style="text-align:left;">
+VARCHAR2(3 BYTE)
+</td>
+<td style="text-align:left;">
+Northeast Gear code; 999=Unknown. See CFDBS Gear Table(GEAR) for actual codes.
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CFDBS_GEAR_NAME
+</td>
+<td style="text-align:left;">
+VARCHAR2(100 BYTE)
+</td>
+<td style="text-align:left;">
+Gear codes used in the dealer data (CFDBS)
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+ACCSP_GEAR_CODE
+</td>
+<td style="text-align:left;">
+VARCHAR2(3 BYTE)
+</td>
+<td style="text-align:left;">
+Gear codes used by ACCSP.
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+ACCSP_GEAR_NAME
+</td>
+<td style="text-align:left;">
+VARCHAR2(100 BYTE)
+</td>
+<td style="text-align:left;">
+Gear names describing codes used by ACCSP.
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="vcs_info_source" class="section level2 hasAnchor" number="3.3">
+<h2><span class="header-section-number">3.3</span> VCS_INFO_SOURCE<a href="support-tables.html#vcs_info_source" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div style="border: 1px solid #ddd; padding: 0px; overflow-y: scroll; height:300px; overflow-x: scroll; width:600px; ">
+<table class="table table-striped table-hover table-condensed" style="margin-left: auto; margin-right: auto;">
+<caption>
+(#tab:chunck 3)VCS_INFO_SOURCE
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+Variable Name
+</th>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+Type
+</th>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+Description
+</th>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+Nullable
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+SOURCE_ID
+</td>
+<td style="text-align:left;">
+NUMBER(2,0)
+</td>
+<td style="text-align:left;">
+ID number linking to the SOURCE_DESC variable from variabes in the cost tables
+</td>
+<td style="text-align:left;">
+No
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+SOURCE_DESC
+</td>
+<td style="text-align:left;">
+VARCHAR2(200 BYTE)
+</td>
+<td style="text-align:left;">
+Indicating the source from which the costs and information provided in the survey were from. Includes: Records, Estimates, or Records and Estiamtes
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="vcs_crew_payment_systems" class="section level2 hasAnchor" number="3.4">
+<h2><span class="header-section-number">3.4</span> VCS_CREW_PAYMENT_SYSTEMS<a href="support-tables.html#vcs_crew_payment_systems" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div style="border: 1px solid #ddd; padding: 0px; overflow-y: scroll; height:300px; overflow-x: scroll; width:600px; ">
+<table class="table table-striped table-hover table-condensed" style="margin-left: auto; margin-right: auto;">
+<caption>
+(#tab:chunck 4)VCS_CREW_PAYMENT_SYSTEMS
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+Variable Name
+</th>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+Type
+</th>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+Description
+</th>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+Nullable
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+PAYMENT_SYSTEM_ID
+</td>
+<td style="text-align:left;">
+NUMBER(2,0)
+</td>
+<td style="text-align:left;">
+ID number linking to the PAYMET_SYSTEM_DESC varible for records in the cost tables
+</td>
+<td style="text-align:left;">
+No
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+PAYMENT_SYSTEM_DESC
+</td>
+<td style="text-align:left;">
+VARCHAR2(20 BYTE)
+</td>
+<td style="text-align:left;">
+The method in which crew are payed. Includes, flat rate, share, combiation (of both share and flat rate) , bushel (a $/bushel system, or other
+</td>
+<td style="text-align:left;">
+No
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="vcs_status_options" class="section level2 hasAnchor" number="3.5">
+<h2><span class="header-section-number">3.5</span> VCS_STATUS_OPTIONS<a href="support-tables.html#vcs_status_options" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div style="border: 1px solid #ddd; padding: 0px; overflow-y: scroll; height:300px; overflow-x: scroll; width:600px; ">
+<table class="table table-striped table-hover table-condensed" style="margin-left: auto; margin-right: auto;">
+<caption>
+(#tab:chunck 5)VCS_STATUS_OPTIONS
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+Variable Name
+</th>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+Type
+</th>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+Description
+</th>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+Nullable
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+STATUS_ID
+</td>
+<td style="text-align:left;">
+NUMBER(2,0)
+</td>
+<td style="text-align:left;">
+ID number linking to the STATUS_DESC varible for records in the cost tables
+</td>
+<td style="text-align:left;">
+No
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+STATUS_DESC
+</td>
+<td style="text-align:left;">
+VARCHAR2(200 BYTE)
+</td>
+<td style="text-align:left;">
+Refers to multiple questions in which common multiple choice answers are provided, including: In specified year, never, I don’t know and perfer not to answer
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="vcs_survey_details" class="section level2 hasAnchor" number="3.6">
+<h2><span class="header-section-number">3.6</span> VCS_SURVEY_DETAILS<a href="support-tables.html#vcs_survey_details" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div style="border: 1px solid #ddd; padding: 0px; overflow-y: scroll; height:300px; overflow-x: scroll; width:600px; ">
+<table class="table table-striped table-hover table-condensed" style="margin-left: auto; margin-right: auto;">
+<caption>
+(#tab:chunck 6)VCS_SURVEY_DETAILS
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+Variable Name
+</th>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+Type
+</th>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+Description
+</th>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+Nullable
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+SURVEY_YEAR
+</td>
+<td style="text-align:left;">
+NUMBER(4,0)
+</td>
+<td style="text-align:left;">
+Year in which costs were queried
+</td>
+<td style="text-align:left;">
+No
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+GEAR_TYPE
+</td>
+<td style="text-align:left;">
+VARCHAR2(100 BYTE)
+</td>
+<td style="text-align:left;">
+Gear group specified for the cost data visualization tool
+</td>
+<td style="text-align:left;">
+No
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+POPULATION
+</td>
+<td style="text-align:left;">
+NUMBER(9,0)
+</td>
+<td style="text-align:left;">
+Population sampled by year, gear type and cost category
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+SAMPLE
+</td>
+<td style="text-align:left;">
+NUMBER(9,0)
+</td>
+<td style="text-align:left;">
+Sampled population by year, gear type and cost category
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+RESPONSE
+</td>
+<td style="text-align:left;">
+NUMBER(9,0)
+</td>
+<td style="text-align:left;">
+Response by year, gear type and cost category
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+COST_CATEGORY
+</td>
+<td style="text-align:left;">
+CHAR(3 BYTE)
+</td>
+<td style="text-align:left;">
+Cost category ID, linkis to VCS_COST_CATEGORIES as the support table
+</td>
+<td style="text-align:left;">
+No
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="vcs_cost_categories" class="section level2 hasAnchor" number="3.7">
+<h2><span class="header-section-number">3.7</span> VCS_COST_CATEGORIES<a href="support-tables.html#vcs_cost_categories" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div style="border: 1px solid #ddd; padding: 0px; overflow-y: scroll; height:300px; overflow-x: scroll; width:600px; ">
+<table class="table table-striped table-hover table-condensed" style="margin-left: auto; margin-right: auto;">
+<caption>
+(#tab:chunck 7)VCS_COST_CATEGORIES
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+Variable Name
+</th>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+Type
+</th>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+Description
+</th>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+Nullable
+</th>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+Notes
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+COST_CATEGORY_ID
+</td>
+<td style="text-align:left;">
+CHAR(3 BYTE)
+</td>
+<td style="text-align:left;">
+Numeric ID for linking to COST_CATEGORY_NAME and characteristics from cost tables
+</td>
+<td style="text-align:left;">
+No
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+COST_CATEGORY_NAME
+</td>
+<td style="text-align:left;">
+VARCHAR2(100 BYTE)
+</td>
+<td style="text-align:left;">
+Name of the sub-cost category for which the cost pertains to (i.e., hull, fishing gear, haul-out). This variable is used to categorize into the larger group cost variable (COST_CATEGORY_GROUP)
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+This variable is used for the cost data visualization tool and may not fit the needs of the end user. Use with caution.
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+COST_CATEGORY_DESC
+</td>
+<td style="text-align:left;">
+VARCHAR2(1000 BYTE)
+</td>
+<td style="text-align:left;">
+Null as the user is to refer to the original source for information about this cost’s description.
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+COST_CATEGORY_GROUP
+</td>
+<td style="text-align:left;">
+VARCHAR2(200 BYTE)
+</td>
+<td style="text-align:left;">
+Overarching cost category for which the sub-cost falls within. Includes Overhead Costs, Repair/Maintenance &amp; Upgrade/Improvement Costs, Vessel Costs and Payments to Crew and Hired Captain
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+This variable is used for the cost data visualization tool and may not fit the needs of the end user. Use with caution.
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="vcs_cost_categories-1" class="section level2 hasAnchor" number="3.8">
+<h2><span class="header-section-number">3.8</span> VCS_COST_CATEGORIES<a href="support-tables.html#vcs_cost_categories-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div style="border: 1px solid #ddd; padding: 0px; overflow-y: scroll; height:300px; overflow-x: scroll; width:600px; ">
+<table class="table table-striped table-hover table-condensed" style="margin-left: auto; margin-right: auto;">
+<caption>
+(#tab:chunck 8)Tables only used in Cost Application
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+Tables views only used by Cost Application
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+VCS_COMMON_COSTS_EXT_MV
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+VCS_COMMON_COSTS_V
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+VCS_COST_CATEGORIES
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+VCS_SURVEY_DETAILS
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="tables-and-views.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="additional-info.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/02-Support_Tables.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["ORACLE_COST_SURVEY_METADATA.pdf", "ORACLE_COST_SURVEY_METADATA.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>
