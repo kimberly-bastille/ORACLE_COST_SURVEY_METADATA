@@ -44,3 +44,4 @@ vcs_survey_details
 vcs_cost_categories
 vcs_cost_categories-1
 r-additional-resources
+additional-resources
