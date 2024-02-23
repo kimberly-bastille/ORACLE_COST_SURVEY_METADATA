@@ -5,31 +5,25 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 2 Tables and Views | Oracle Cost Survey Metadata</title>
-  <meta name="description" content="<p>This is a minimal example of using the bookdown package to write a book.
-The HTML output format for this example is bookdown::gitbook,
-set in the _output.yml file.</p>" />
+  <meta name="description" content="This website serves as the official metadata for the SSB cost survey data, databased on Oracle." />
   <meta name="generator" content="bookdown 0.37 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 2 Tables and Views | Oracle Cost Survey Metadata" />
   <meta property="og:type" content="book" />
   
-  <meta property="og:description" content="<p>This is a minimal example of using the bookdown package to write a book.
-The HTML output format for this example is bookdown::gitbook,
-set in the _output.yml file.</p>" />
-  <meta name="github-repo" content="rstudio/bookdown-demo" />
+  <meta property="og:description" content="This website serves as the official metadata for the SSB cost survey data, databased on Oracle." />
+  <meta name="github-repo" content="https://github.com/SWerner2/ORACLE_COST_SURVEY_METADATA" />
 
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="Chapter 2 Tables and Views | Oracle Cost Survey Metadata" />
   
-  <meta name="twitter:description" content="<p>This is a minimal example of using the bookdown package to write a book.
-The HTML output format for this example is bookdown::gitbook,
-set in the _output.yml file.</p>" />
+  <meta name="twitter:description" content="This website serves as the official metadata for the SSB cost survey data, databased on Oracle." />
   
 
 <meta name="author" content="Samantha Werner, Gregory Ardini, Elizabeth Conley and Tanya Noteva" />
 
 
-<meta name="date" content="2024-02-22" />
+<meta name="date" content="2024-02-23" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -37,7 +31,7 @@ set in the _output.yml file.</p>" />
   
   
 <link rel="prev" href="index.html"/>
-
+<link rel="next" href="additional-info.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -84,7 +78,7 @@ set in the _output.yml file.</p>" />
 <li><a href="./">A Minimal Book Example</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> url: your book url like https://bookdown.org/yihui/bookdown</a>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> url: https://swerner2.github.io/ORACLE_COST_SURVEY_METADATA/</a>
 <ul>
 <li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#ssb-cost-survey"><i class="fa fa-check"></i><b>1.1</b> SSB Cost Survey</a></li>
 <li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#confidentiality"><i class="fa fa-check"></i><b>1.2</b> Confidentiality</a></li>
@@ -97,6 +91,7 @@ set in the _output.yml file.</p>" />
 <li class="chapter" data-level="2.3" data-path="tables-and-views.html"><a href="tables-and-views.html#vcs_cost2012"><i class="fa fa-check"></i><b>2.3</b> VCS_COST2012</a></li>
 <li class="chapter" data-level="2.4" data-path="tables-and-views.html"><a href="tables-and-views.html#vcs_cost2015"><i class="fa fa-check"></i><b>2.4</b> VCS_COST2015</a></li>
 </ul></li>
+<li class="chapter" data-level="3" data-path="additional-info.html"><a href="additional-info.html"><i class="fa fa-check"></i><b>3</b> Additional Info</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -123,8 +118,8 @@ set in the _output.yml file.</p>" />
 <h2><span class="header-section-number">2.1</span> VCS_COMMON_VARAIBLES_MV<a href="tables-and-views.html#vcs_common_varaibles_mv" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p><strong>Description:</strong> This view presents common variables collected from the cost survey over time. Values are presented at the annual vessel-level for the year in which they were queried unless otherwise noted (nominal dollars). To be considered a common variable, the variable must appear in two or more cost surveys over time. Given that the survey instrument changed over time, there may be slight discrepancies in the variable over time. Please see the comments for further clarification.</p>
 <p><strong>Data warnings:</strong> Crew_Pymts in this year contains both crew and captain payments. Captain_Pymts is null but retained for the cost data application reasons.</p>
-<div style="border: 1px solid #ddd; padding: 0px; overflow-y: scroll; height:500px; overflow-x: scroll; width:1000px; ">
-<table class="table table-striped table-hover" style="margin-left: auto; margin-right: auto;">
+<div style="border: 1px solid #ddd; padding: 0px; overflow-y: scroll; height:400px; overflow-x: scroll; width:700px; ">
+<table class="table table-striped table-hover table-condensed" style="margin-left: auto; margin-right: auto;">
 <caption>
 (#tab:chunck 1)VCS_COMMON_VARIABLES_MV METADATA
 </caption>
@@ -1602,8 +1597,8 @@ NA
 <h2><span class="header-section-number">2.2</span> VCS_COST2011<a href="tables-and-views.html#vcs_cost2011" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p><strong>Description:</strong> This view presents common variables collected from the cost survey over time. Values are presented at the annual vessel-level for the year in which they were queried unless otherwise noted (nominal dollars). To be considered a common variable, the variable must appear in two or more cost surveys over time. Given that the survey instrument changed over time, there may be slight discrepancies in the variable over time. Please see the comments for further clarification.</p>
 <p><strong>Data warnings:</strong> Crew_Pymts in this year contains both crew and captain payments. Captain_Pymts is null but retained for the cost data application reasons.</p>
-<div style="border: 1px solid #ddd; padding: 0px; overflow-y: scroll; height:500px; overflow-x: scroll; width:1000px; ">
-<table class="table table-striped table-hover" style="margin-left: auto; margin-right: auto;">
+<div style="border: 1px solid #ddd; padding: 0px; overflow-y: scroll; height:400px; overflow-x: scroll; width:700px; ">
+<table class="table table-striped table-hover table-condensed" style="margin-left: auto; margin-right: auto;">
 <caption>
 (#tab:chunck 2)VCS_COST2011 METADATA
 </caption>
@@ -3206,8 +3201,8 @@ NA
 <h2><span class="header-section-number">2.3</span> VCS_COST2012<a href="tables-and-views.html#vcs_cost2012" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p><strong>Description:</strong> This is the cleaned data collected from the SSB 2012 cost survey. The costs were mostly at the vessel-level, however, some business-level costs which are described in the data warnings section. The data has been cleaned as described in the Cost Survey Tech Memo. All costs are presented in nominal dollars.</p>
 <p><strong>Data Warnings:</strong> All overhead cost variables are collected for all vessels rather than the vessel-level. This includes the following variables: SHOP_EXP , OFFICE_EXP , VEHICLE_USAGE_COST , BUSINESS_TRAVEL_COST, ASSOCIATION_FEES , PROFESSIONAL_FEES, BUS_LOAN_PRINCIPAL_COST, BUS_LOAN_INTEREST_COST, ADVERTISING_COST , and NONCREW_LABOR_COST</p>
-<div style="border: 1px solid #ddd; padding: 0px; overflow-y: scroll; height:500px; overflow-x: scroll; width:1000px; ">
-<table class="table table-striped table-hover" style="margin-left: auto; margin-right: auto;">
+<div style="border: 1px solid #ddd; padding: 0px; overflow-y: scroll; height:400px; overflow-x: scroll; width:700px; ">
+<table class="table table-striped table-hover table-condensed" style="margin-left: auto; margin-right: auto;">
 <caption>
 (#tab:chunck 3)VCS_COST2012 METADATA
 </caption>
@@ -5075,8 +5070,8 @@ NA
 <h2><span class="header-section-number">2.4</span> VCS_COST2015<a href="tables-and-views.html#vcs_cost2015" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p><strong>Description:</strong> This is the cleaned data collected from the SSB 2015 cost survey. The costs collected at the vessel or business-level which will be described in the comments section. Note that variable names may change over time such that office_exp could be for all vessels in one year and the selected vessel in another. The data has been cleaned as described in the Cost Survey Tech Memo. All costs are presented in nominal dollars.</p>
 <p><strong>Data Warnings:</strong> All overhead cost variables are collected for all vessels rather than the vessel-level.There may be some variables not included here that are in the survey because there were no responses provided in the dataset.</p>
-<div style="border: 1px solid #ddd; padding: 0px; overflow-y: scroll; height:500px; overflow-x: scroll; width:1000px; ">
-<table class="table table-striped table-hover" style="margin-left: auto; margin-right: auto;">
+<div style="border: 1px solid #ddd; padding: 0px; overflow-y: scroll; height:400px; overflow-x: scroll; width:700px; ">
+<table class="table table-striped table-hover table-condensed" style="margin-left: auto; margin-right: auto;">
 <caption>
 (#tab:chunck 4)VCS_COST2015 METADATA
 </caption>
@@ -5094,9 +5089,6 @@ Description
 <th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
 Notes
 </th>
-<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
-…5
-</th>
 </tr>
 </thead>
 <tbody>
@@ -5109,9 +5101,6 @@ VARCHAR2(30 BYTE)
 </td>
 <td style="text-align:left;">
 Official vessel registration number
-</td>
-<td style="text-align:left;">
-NA
 </td>
 <td style="text-align:left;">
 NA
@@ -5130,9 +5119,6 @@ Year for which costs were collected (not the year the survey was administered)
 <td style="text-align:left;">
 NA
 </td>
-<td style="text-align:left;">
-NA
-</td>
 </tr>
 <tr>
 <td style="text-align:left;">
@@ -5143,9 +5129,6 @@ VARCHAR2(40 BYTE)
 </td>
 <td style="text-align:left;">
 Primary gear type based on majority revenues earned in 2015
-</td>
-<td style="text-align:left;">
-NA
 </td>
 <td style="text-align:left;">
 NA
@@ -5164,9 +5147,6 @@ Gear and vessel length (either above the average vessel length for this gear gro
 <td style="text-align:left;">
 NA
 </td>
-<td style="text-align:left;">
-NA
-</td>
 </tr>
 <tr>
 <td style="text-align:left;">
@@ -5177,9 +5157,6 @@ NUMBER(1,0)
 </td>
 <td style="text-align:left;">
 Mode for which the survey was completed (0-online response; 1 - mail response)
-</td>
-<td style="text-align:left;">
-NA
 </td>
 <td style="text-align:left;">
 NA
@@ -5198,9 +5175,6 @@ Survey completeness (complete, partial ) where a complete is defined by the majo
 <td style="text-align:left;">
 complete or partial
 </td>
-<td style="text-align:left;">
-NA
-</td>
 </tr>
 <tr>
 <td style="text-align:left;">
@@ -5211,9 +5185,6 @@ VARCHAR2(80 BYTE)
 </td>
 <td style="text-align:left;">
 Name of the vessel
-</td>
-<td style="text-align:left;">
-NA
 </td>
 <td style="text-align:left;">
 NA
@@ -5232,9 +5203,6 @@ Ownership type for the vessel (corporation, sole proprietorship, etc.)
 <td style="text-align:left;">
 NA
 </td>
-<td style="text-align:left;">
-NA
-</td>
 </tr>
 <tr>
 <td style="text-align:left;">
@@ -5245,9 +5213,6 @@ NUMBER(2,0)
 </td>
 <td style="text-align:left;">
 Number of owners of the vessel (including the vessel owner to whom the survey was sent)
-</td>
-<td style="text-align:left;">
-NA
 </td>
 <td style="text-align:left;">
 NA
@@ -5266,9 +5231,6 @@ If vessel was acquired from a previous owner or bought new (acquired or new)
 <td style="text-align:left;">
 NA
 </td>
-<td style="text-align:left;">
-NA
-</td>
 </tr>
 <tr>
 <td style="text-align:left;">
@@ -5279,9 +5241,6 @@ NUMBER(4,0)
 </td>
 <td style="text-align:left;">
 Year that the vessel owner became the owner
-</td>
-<td style="text-align:left;">
-NA
 </td>
 <td style="text-align:left;">
 NA
@@ -5300,9 +5259,6 @@ Harbor of the port where the vessel operated most of the time during 2015
 <td style="text-align:left;">
 NA
 </td>
-<td style="text-align:left;">
-NA
-</td>
 </tr>
 <tr>
 <td style="text-align:left;">
@@ -5313,9 +5269,6 @@ VARCHAR2(100 BYTE)
 </td>
 <td style="text-align:left;">
 City of the port where the vessel operated most of the time during 2015
-</td>
-<td style="text-align:left;">
-NA
 </td>
 <td style="text-align:left;">
 NA
@@ -5334,9 +5287,6 @@ State abbreviation of the port where the vessel operated most of the time during
 <td style="text-align:left;">
 NA
 </td>
-<td style="text-align:left;">
-NA
-</td>
 </tr>
 <tr>
 <td style="text-align:left;">
@@ -5347,9 +5297,6 @@ NUMBER(1,0)
 </td>
 <td style="text-align:left;">
 Indicator variable of 1 if the vessel took at least one commercial trip and landed fish for commercial sale or 0 if the vessel was inactive for all of 2015
-</td>
-<td style="text-align:left;">
-NA
 </td>
 <td style="text-align:left;">
 NA
@@ -5368,9 +5315,6 @@ Number of fisheries visited in 2015, multiple choice between 1-5 or 6 or more
 <td style="text-align:left;">
 NA
 </td>
-<td style="text-align:left;">
-NA
-</td>
 </tr>
 <tr>
 <td style="text-align:left;">
@@ -5381,9 +5325,6 @@ VARCHAR2(100 BYTE)
 </td>
 <td style="text-align:left;">
 Description of Gear, Species and Region used in Fishery 1. In some cases, gear, species and/or region may be missing from the sequence. The data are separated by a “;”. Note, these data were databased in 2023 but were not adequately cleaned at the time of their storage given that they had not been used. We are retaining them here in the event the data are of use to the end user despite their condition.
-</td>
-<td style="text-align:left;">
-NA
 </td>
 <td style="text-align:left;">
 NA
@@ -5402,9 +5343,6 @@ Number of trips taken for that fishery in 2015
 <td style="text-align:left;">
 NA
 </td>
-<td style="text-align:left;">
-NA
-</td>
 </tr>
 <tr>
 <td style="text-align:left;">
@@ -5415,9 +5353,6 @@ NUMBER(5,2)
 </td>
 <td style="text-align:left;">
 Average Days at Sea Per Typical Trip for that fishery
-</td>
-<td style="text-align:left;">
-NA
 </td>
 <td style="text-align:left;">
 NA
@@ -5436,9 +5371,6 @@ Description of Gear, Species and Region used in Fishery 2. In some cases, gear, 
 <td style="text-align:left;">
 NA
 </td>
-<td style="text-align:left;">
-NA
-</td>
 </tr>
 <tr>
 <td style="text-align:left;">
@@ -5449,9 +5381,6 @@ NUMBER(5,0)
 </td>
 <td style="text-align:left;">
 Number of trips taken for that fishery in 2015
-</td>
-<td style="text-align:left;">
-NA
 </td>
 <td style="text-align:left;">
 NA
@@ -5470,9 +5399,6 @@ Average Days at Sea Per Typical Trip for that fishery
 <td style="text-align:left;">
 NA
 </td>
-<td style="text-align:left;">
-NA
-</td>
 </tr>
 <tr>
 <td style="text-align:left;">
@@ -5483,9 +5409,6 @@ VARCHAR2(100 BYTE)
 </td>
 <td style="text-align:left;">
 Description of Gear, Species and Region used in Fishery 3. In some cases, gear, species and/or region may be missing from the sequence. The data are separated by a “;”. Note, these data were databased in 2023 but were not adequately cleaned at the time of their storage given that they had not been used. We are retaining them here in the event the data are of use to the end user despite their condition.
-</td>
-<td style="text-align:left;">
-NA
 </td>
 <td style="text-align:left;">
 NA
@@ -5504,9 +5427,6 @@ Number of trips taken for that fishery in 2015
 <td style="text-align:left;">
 NA
 </td>
-<td style="text-align:left;">
-NA
-</td>
 </tr>
 <tr>
 <td style="text-align:left;">
@@ -5517,9 +5437,6 @@ NUMBER(5,2)
 </td>
 <td style="text-align:left;">
 Average Days at Sea Per Typical Trip for that fishery
-</td>
-<td style="text-align:left;">
-NA
 </td>
 <td style="text-align:left;">
 NA
@@ -5538,9 +5455,6 @@ Total combined upgrade and improvement costs
 <td style="text-align:left;">
 Upgrade and Improvement Costs
 </td>
-<td style="text-align:left;">
-NA
-</td>
 </tr>
 <tr>
 <td style="text-align:left;">
@@ -5551,9 +5465,6 @@ NUMBER(9,0)
 </td>
 <td style="text-align:left;">
 Total combined upgrade and improvement costs depreciated as indicated on the owners 2015 federal tax return
-</td>
-<td style="text-align:left;">
-NA
 </td>
 <td style="text-align:left;">
 NA
@@ -5572,9 +5483,6 @@ Total combined repair and maintenance costs
 <td style="text-align:left;">
 NA
 </td>
-<td style="text-align:left;">
-NA
-</td>
 </tr>
 <tr>
 <td style="text-align:left;">
@@ -5585,9 +5493,6 @@ NUMBER(1,0)
 </td>
 <td style="text-align:left;">
 Captain type for the majority of trips taken in 2012 see the lookup table VCS_CAPTAIN_STATUS for corresponding description (Examples: Mostly Hired Captain, Mostly Owner-operated, Split Evenly, No Trips This Year, Other)
-</td>
-<td style="text-align:left;">
-NA
 </td>
 <td style="text-align:left;">
 NA
@@ -5606,9 +5511,6 @@ Average number of crew members in 2015
 <td style="text-align:left;">
 NA
 </td>
-<td style="text-align:left;">
-NA
-</td>
 </tr>
 <tr>
 <td style="text-align:left;">
@@ -5619,9 +5521,6 @@ NUMBER(1,0)
 </td>
 <td style="text-align:left;">
 Method used to pay crew. Use look-up table VCS_CREW_PAYMENT_SYSTEM. Examples include, flat rate, shared system, both etc.
-</td>
-<td style="text-align:left;">
-NA
 </td>
 <td style="text-align:left;">
 NA
@@ -5640,9 +5539,6 @@ Observer coverage and science costs were deducted before distributing shares (ye
 <td style="text-align:left;">
 NA
 </td>
-<td style="text-align:left;">
-NA
-</td>
 </tr>
 <tr>
 <td style="text-align:left;">
@@ -5653,9 +5549,6 @@ NUMBER(1,0)
 </td>
 <td style="text-align:left;">
 Fuel costs were deducted before distributing shares (yes/no)
-</td>
-<td style="text-align:left;">
-NA
 </td>
 <td style="text-align:left;">
 NA
@@ -5674,9 +5567,6 @@ Ice costs were deducted before distributing shares (yes/no)
 <td style="text-align:left;">
 NA
 </td>
-<td style="text-align:left;">
-NA
-</td>
 </tr>
 <tr>
 <td style="text-align:left;">
@@ -5687,9 +5577,6 @@ NUMBER(1,0)
 </td>
 <td style="text-align:left;">
 Food costs were deducted before distributing shares (yes/no)
-</td>
-<td style="text-align:left;">
-NA
 </td>
 <td style="text-align:left;">
 NA
@@ -5708,9 +5595,6 @@ Tackle costs were deducted before distributing shares (yes/no)
 <td style="text-align:left;">
 NA
 </td>
-<td style="text-align:left;">
-NA
-</td>
 </tr>
 <tr>
 <td style="text-align:left;">
@@ -5721,9 +5605,6 @@ NUMBER(1,0)
 </td>
 <td style="text-align:left;">
 Bait costs were deducted before distributing shares (yes/no)
-</td>
-<td style="text-align:left;">
-NA
 </td>
 <td style="text-align:left;">
 NA
@@ -5742,9 +5623,6 @@ Quota leasing costs were deducted before distributing shares (yes/no)
 <td style="text-align:left;">
 NA
 </td>
-<td style="text-align:left;">
-NA
-</td>
 </tr>
 <tr>
 <td style="text-align:left;">
@@ -5755,9 +5633,6 @@ NUMBER(1,0)
 </td>
 <td style="text-align:left;">
 All other costs were deducted before distributing shares (yes/no)
-</td>
-<td style="text-align:left;">
-NA
 </td>
 <td style="text-align:left;">
 NA
@@ -5776,9 +5651,6 @@ Observer coverage and science costs were deducted from the boat’s share (yes/n
 <td style="text-align:left;">
 NA
 </td>
-<td style="text-align:left;">
-NA
-</td>
 </tr>
 <tr>
 <td style="text-align:left;">
@@ -5789,9 +5661,6 @@ NUMBER(1,0)
 </td>
 <td style="text-align:left;">
 Fuel costs were deducted from the boat’s share (yes/no)
-</td>
-<td style="text-align:left;">
-NA
 </td>
 <td style="text-align:left;">
 NA
@@ -5810,9 +5679,6 @@ Ice costs were deducted from the boat’s share (yes/no)
 <td style="text-align:left;">
 NA
 </td>
-<td style="text-align:left;">
-NA
-</td>
 </tr>
 <tr>
 <td style="text-align:left;">
@@ -5823,9 +5689,6 @@ NUMBER(1,0)
 </td>
 <td style="text-align:left;">
 Food costs were deducted from the boat’s share (yes/no)
-</td>
-<td style="text-align:left;">
-NA
 </td>
 <td style="text-align:left;">
 NA
@@ -5844,9 +5707,6 @@ Tackle costs were deducted from the boat’s share (yes/no)
 <td style="text-align:left;">
 NA
 </td>
-<td style="text-align:left;">
-NA
-</td>
 </tr>
 <tr>
 <td style="text-align:left;">
@@ -5857,9 +5717,6 @@ NUMBER(1,0)
 </td>
 <td style="text-align:left;">
 Bait costs were deducted from the boat’s share (yes/no)
-</td>
-<td style="text-align:left;">
-NA
 </td>
 <td style="text-align:left;">
 NA
@@ -5878,9 +5735,6 @@ Quota leasing costs were deducted from the boat’s share (yes/no)
 <td style="text-align:left;">
 NA
 </td>
-<td style="text-align:left;">
-NA
-</td>
 </tr>
 <tr>
 <td style="text-align:left;">
@@ -5891,9 +5745,6 @@ NUMBER(1,0)
 </td>
 <td style="text-align:left;">
 All other costs were deducted from the boat’s share (yes/no)
-</td>
-<td style="text-align:left;">
-NA
 </td>
 <td style="text-align:left;">
 NA
@@ -5912,9 +5763,6 @@ Observer and science costs were deducted from the captain’s share (yes/no)
 <td style="text-align:left;">
 NA
 </td>
-<td style="text-align:left;">
-NA
-</td>
 </tr>
 <tr>
 <td style="text-align:left;">
@@ -5925,9 +5773,6 @@ NUMBER(1,0)
 </td>
 <td style="text-align:left;">
 Fuel costs were deducted from the captain’s share (yes/no)
-</td>
-<td style="text-align:left;">
-NA
 </td>
 <td style="text-align:left;">
 NA
@@ -5946,9 +5791,6 @@ Ice costs were deducted from the captain’s share (yes/no)
 <td style="text-align:left;">
 NA
 </td>
-<td style="text-align:left;">
-NA
-</td>
 </tr>
 <tr>
 <td style="text-align:left;">
@@ -5959,9 +5801,6 @@ NUMBER(1,0)
 </td>
 <td style="text-align:left;">
 Food costs were deducted from the captain’s share (yes/no)
-</td>
-<td style="text-align:left;">
-NA
 </td>
 <td style="text-align:left;">
 NA
@@ -5980,9 +5819,6 @@ Tackle costs were deducted from the captain’s share (yes/no)
 <td style="text-align:left;">
 NA
 </td>
-<td style="text-align:left;">
-NA
-</td>
 </tr>
 <tr>
 <td style="text-align:left;">
@@ -5993,9 +5829,6 @@ NUMBER(1,0)
 </td>
 <td style="text-align:left;">
 Bait costs were deducted from the captain’s share (yes/no)
-</td>
-<td style="text-align:left;">
-NA
 </td>
 <td style="text-align:left;">
 NA
@@ -6014,9 +5847,6 @@ Quota leasing costs were deducted from the captain’s share (yes/no)
 <td style="text-align:left;">
 NA
 </td>
-<td style="text-align:left;">
-NA
-</td>
 </tr>
 <tr>
 <td style="text-align:left;">
@@ -6027,9 +5857,6 @@ NUMBER(1,0)
 </td>
 <td style="text-align:left;">
 All other costs were deducted from the captain’s share (yes/no)
-</td>
-<td style="text-align:left;">
-NA
 </td>
 <td style="text-align:left;">
 NA
@@ -6048,9 +5875,6 @@ Observer and science costs were deducted from the crew’s share (yes/no)
 <td style="text-align:left;">
 NA
 </td>
-<td style="text-align:left;">
-NA
-</td>
 </tr>
 <tr>
 <td style="text-align:left;">
@@ -6061,9 +5885,6 @@ NUMBER(1,0)
 </td>
 <td style="text-align:left;">
 Fuel costs were deducted from the crew’s share (yes/no)
-</td>
-<td style="text-align:left;">
-NA
 </td>
 <td style="text-align:left;">
 NA
@@ -6082,9 +5903,6 @@ Ice costs were deducted from the crew’s share (yes/no)
 <td style="text-align:left;">
 NA
 </td>
-<td style="text-align:left;">
-NA
-</td>
 </tr>
 <tr>
 <td style="text-align:left;">
@@ -6095,9 +5913,6 @@ NUMBER(1,0)
 </td>
 <td style="text-align:left;">
 Food costs were deducted from the crew’s share (yes/no)
-</td>
-<td style="text-align:left;">
-NA
 </td>
 <td style="text-align:left;">
 NA
@@ -6116,9 +5931,6 @@ Tackle costs were deducted from the crew’s share (yes/no)
 <td style="text-align:left;">
 NA
 </td>
-<td style="text-align:left;">
-NA
-</td>
 </tr>
 <tr>
 <td style="text-align:left;">
@@ -6129,9 +5941,6 @@ NUMBER(1,0)
 </td>
 <td style="text-align:left;">
 Bait costs were deducted from the crew’s share (yes/no)
-</td>
-<td style="text-align:left;">
-NA
 </td>
 <td style="text-align:left;">
 NA
@@ -6150,9 +5959,6 @@ Quota leasing costs were deducted from the crew’s share (yes/no)
 <td style="text-align:left;">
 NA
 </td>
-<td style="text-align:left;">
-NA
-</td>
 </tr>
 <tr>
 <td style="text-align:left;">
@@ -6163,9 +5969,6 @@ NUMBER(1,0)
 </td>
 <td style="text-align:left;">
 All other costs were deducted from the crew’s share (yes/no)
-</td>
-<td style="text-align:left;">
-NA
 </td>
 <td style="text-align:left;">
 NA
@@ -6184,9 +5987,6 @@ Number of crew compensated with a flat rate on a typical trip in 2015 (optios, 0
 <td style="text-align:left;">
 NA
 </td>
-<td style="text-align:left;">
-NA
-</td>
 </tr>
 <tr>
 <td style="text-align:left;">
@@ -6197,9 +5997,6 @@ VARCHAR2(40 BYTE)
 </td>
 <td style="text-align:left;">
 Describe how crew were paid when not on a share system on trips taken in 2015 ( I compensated crew with a flat rate per DAS, I compensated all or some crew with a flat rate, or other flat rate compensation)
-</td>
-<td style="text-align:left;">
-NA
 </td>
 <td style="text-align:left;">
 NA
@@ -6218,9 +6015,6 @@ Flat rate compensation rate for all crew or some crew in $/ trip
 <td style="text-align:left;">
 NA
 </td>
-<td style="text-align:left;">
-NA
-</td>
 </tr>
 <tr>
 <td style="text-align:left;">
@@ -6231,9 +6025,6 @@ NUMBER(1,0)
 </td>
 <td style="text-align:left;">
 Food was purchased by crew (yes/no)
-</td>
-<td style="text-align:left;">
-NA
 </td>
 <td style="text-align:left;">
 NA
@@ -6252,9 +6043,6 @@ Foul weather gear was purchased by crew (yes/no)
 <td style="text-align:left;">
 NA
 </td>
-<td style="text-align:left;">
-NA
-</td>
 </tr>
 <tr>
 <td style="text-align:left;">
@@ -6265,9 +6053,6 @@ NUMBER(1,0)
 </td>
 <td style="text-align:left;">
 Boots were purchased by crew (yes/no)
-</td>
-<td style="text-align:left;">
-NA
 </td>
 <td style="text-align:left;">
 NA
@@ -6286,9 +6071,6 @@ Gloves were purchased by crew (yes/no)
 <td style="text-align:left;">
 NA
 </td>
-<td style="text-align:left;">
-NA
-</td>
 </tr>
 <tr>
 <td style="text-align:left;">
@@ -6299,9 +6081,6 @@ NUMBER(1,0)
 </td>
 <td style="text-align:left;">
 Knives were purchased by crew (yes/no)
-</td>
-<td style="text-align:left;">
-NA
 </td>
 <td style="text-align:left;">
 NA
@@ -6320,9 +6099,6 @@ Total operating costs for 2015
 <td style="text-align:left;">
 NA
 </td>
-<td style="text-align:left;">
-NA
-</td>
 </tr>
 <tr>
 <td style="text-align:left;">
@@ -6337,9 +6113,6 @@ Mooring/Dockage Fees for this vessel in 2015 including upkeep expenses
 <td style="text-align:left;">
 NA
 </td>
-<td style="text-align:left;">
-NA
-</td>
 </tr>
 <tr>
 <td style="text-align:left;">
@@ -6350,9 +6123,6 @@ NUMBER(9,0)
 </td>
 <td style="text-align:left;">
 Permit and/or License fees
-</td>
-<td style="text-align:left;">
-NA
 </td>
 <td style="text-align:left;">
 NA
@@ -6372,9 +6142,6 @@ Vessel Insurance Premium in 2015 for this vessel
 <td style="text-align:left;">
 NA
 </td>
-<td style="text-align:left;">
-NA
-</td>
 </tr>
 <tr>
 <td style="text-align:left;">
@@ -6385,9 +6152,6 @@ NUMBER(2,0)
 </td>
 <td style="text-align:left;">
 Number of months insured
-</td>
-<td style="text-align:left;">
-NA
 </td>
 <td style="text-align:left;">
 NA
@@ -6406,9 +6170,6 @@ Quota or DAS lease payments
 <td style="text-align:left;">
 NA
 </td>
-<td style="text-align:left;">
-NA
-</td>
 </tr>
 <tr>
 <td style="text-align:left;">
@@ -6419,9 +6180,6 @@ NUMBER(9,0)
 </td>
 <td style="text-align:left;">
 Total payments to crew
-</td>
-<td style="text-align:left;">
-NA
 </td>
 <td style="text-align:left;">
 NA
@@ -6440,9 +6198,6 @@ Total payments to hired captains
 <td style="text-align:left;">
 NA
 </td>
-<td style="text-align:left;">
-NA
-</td>
 </tr>
 <tr>
 <td style="text-align:left;">
@@ -6453,9 +6208,6 @@ NUMBER(9,0)
 </td>
 <td style="text-align:left;">
 Vessel Activity/Quota Monitoring Cost for this vessel in 2015 (such as observer or dockside monitoring cost)
-</td>
-<td style="text-align:left;">
-NA
 </td>
 <td style="text-align:left;">
 NA
@@ -6474,9 +6226,6 @@ Estimated fair market value of this vessel INCLUDING all equipment, fishing gear
 <td style="text-align:left;">
 NA
 </td>
-<td style="text-align:left;">
-NA
-</td>
 </tr>
 <tr>
 <td style="text-align:left;">
@@ -6487,9 +6236,6 @@ VARCHAR2(50 BYTE)
 </td>
 <td style="text-align:left;">
 Last time a marine survey was conducted for the vessel (in specified year, I don’t know, never, prefer not to answer)
-</td>
-<td style="text-align:left;">
-NA
 </td>
 <td style="text-align:left;">
 NA
@@ -6508,9 +6254,6 @@ Last calendar year vessel had a marine survey conducted
 <td style="text-align:left;">
 NA
 </td>
-<td style="text-align:left;">
-NA
-</td>
 </tr>
 <tr>
 <td style="text-align:left;">
@@ -6521,9 +6264,6 @@ NUMBER(9,0)
 </td>
 <td style="text-align:left;">
 Market value of the vessel (NOT INCLUDING FISHING PERMITS OR FISHING HISTORY) at the time of its last marine survey
-</td>
-<td style="text-align:left;">
-NA
 </td>
 <td style="text-align:left;">
 NA
@@ -6542,9 +6282,6 @@ Has the market value of the permits and fishing history associated with the vess
 <td style="text-align:left;">
 The possible answers are: in specified year, never, prefer not to answer, don’t know or NULL
 </td>
-<td style="text-align:left;">
-NA
-</td>
 </tr>
 <tr>
 <td style="text-align:left;">
@@ -6555,9 +6292,6 @@ NUMBER(4,0)
 </td>
 <td style="text-align:left;">
 Calendar year the market value of the permits and fishing history associated with the vessel were evaluated by a marine surveyor
-</td>
-<td style="text-align:left;">
-NA
 </td>
 <td style="text-align:left;">
 NA
@@ -6576,9 +6310,6 @@ Market value of the fishing permits and history associated with the vessel when 
 <td style="text-align:left;">
 NA
 </td>
-<td style="text-align:left;">
-NA
-</td>
 </tr>
 <tr>
 <td style="text-align:left;">
@@ -6589,9 +6320,6 @@ NUMBER(9,0)
 </td>
 <td style="text-align:left;">
 Total amount of fishing revenue the fishing BUSINESS received from 2015 from leasing out quota from permits associated with the vessel
-</td>
-<td style="text-align:left;">
-NA
 </td>
 <td style="text-align:left;">
 NA
@@ -6610,9 +6338,6 @@ Total amount of any payments the fishing business received from the government i
 <td style="text-align:left;">
 NA
 </td>
-<td style="text-align:left;">
-NA
-</td>
 </tr>
 <tr>
 <td style="text-align:left;">
@@ -6623,9 +6348,6 @@ NUMBER(4,0)
 </td>
 <td style="text-align:left;">
 Number of vessels operated or maintained for fishing business in 2015
-</td>
-<td style="text-align:left;">
-NA
 </td>
 <td style="text-align:left;">
 NA
@@ -6644,9 +6366,6 @@ Total upgrade and improvement costs for the fishing business in 2015
 <td style="text-align:left;">
 NA
 </td>
-<td style="text-align:left;">
-NA
-</td>
 </tr>
 <tr>
 <td style="text-align:left;">
@@ -6657,9 +6376,6 @@ NUMBER(9,0)
 </td>
 <td style="text-align:left;">
 Total depreciated upgrade and improvement costs for the fishing business in 2015 as indicated on their federal tax return
-</td>
-<td style="text-align:left;">
-NA
 </td>
 <td style="text-align:left;">
 NA
@@ -6678,9 +6394,6 @@ Total repair and maintenance costs for the fishing business in 2015
 <td style="text-align:left;">
 NA
 </td>
-<td style="text-align:left;">
-NA
-</td>
 </tr>
 <tr>
 <td style="text-align:left;">
@@ -6691,9 +6404,6 @@ NUMBER(9,0)
 </td>
 <td style="text-align:left;">
 Principal paid on business loans in 2015 for the entire fishing business
-</td>
-<td style="text-align:left;">
-NA
 </td>
 <td style="text-align:left;">
 NA
@@ -6712,9 +6422,6 @@ Interest paid on business loans in 2015 for the entire fishing business
 <td style="text-align:left;">
 NA
 </td>
-<td style="text-align:left;">
-NA
-</td>
 </tr>
 <tr>
 <td style="text-align:left;">
@@ -6725,9 +6432,6 @@ VARCHAR2(10 BYTE)
 </td>
 <td style="text-align:left;">
 Indication of health insurance status for 2015 (I purchased health insurance for myself, I did not have health insurance, I was covered by spouse’s plan, Other)
-</td>
-<td style="text-align:left;">
-NA
 </td>
 <td style="text-align:left;">
 NA
@@ -6746,9 +6450,6 @@ Health insurance cost if covered
 <td style="text-align:left;">
 NA
 </td>
-<td style="text-align:left;">
-NA
-</td>
 </tr>
 <tr>
 <td style="text-align:left;">
@@ -6763,9 +6464,6 @@ Business vehicle usage costs for fishing business-related purposes business-rela
 <td style="text-align:left;">
 These variables were collected for all vessels across the fishing business (not vessel-level costs).
 </td>
-<td style="text-align:left;">
-NA
-</td>
 </tr>
 <tr>
 <td style="text-align:left;">
@@ -6778,9 +6476,6 @@ NUMBER(9,0)
 Business travel costs: Lodging, travel and
 transportation expenses for
 business-related travel for entire business
-</td>
-<td style="text-align:left;">
-NA
 </td>
 <td style="text-align:left;">
 NA
@@ -6800,9 +6495,6 @@ organization, sector fess and union dues for entire fishing business
 <td style="text-align:left;">
 NA
 </td>
-<td style="text-align:left;">
-NA
-</td>
 </tr>
 <tr>
 <td style="text-align:left;">
@@ -6818,9 +6510,6 @@ Settlement, accounting and legal fees for entire fishing business
 <td style="text-align:left;">
 NA
 </td>
-<td style="text-align:left;">
-NA
-</td>
 </tr>
 <tr>
 <td style="text-align:left;">
@@ -6831,9 +6520,6 @@ NUMBER(9,0)
 </td>
 <td style="text-align:left;">
 Advertising Costs for entire fishing business
-</td>
-<td style="text-align:left;">
-NA
 </td>
 <td style="text-align:left;">
 NA
@@ -6854,9 +6540,6 @@ administrative assistant for entire fishing business
 <td style="text-align:left;">
 NA
 </td>
-<td style="text-align:left;">
-NA
-</td>
 </tr>
 <tr>
 <td style="text-align:left;">
@@ -6867,9 +6550,6 @@ NUMBER(9,0)
 </td>
 <td style="text-align:left;">
 Total revenue derived from any permits within the entire fishing business
-</td>
-<td style="text-align:left;">
-NA
 </td>
 <td style="text-align:left;">
 NA
@@ -6888,9 +6568,6 @@ Government payments received for the entire business
 <td style="text-align:left;">
 NA
 </td>
-<td style="text-align:left;">
-NA
-</td>
 </tr>
 <tr>
 <td style="text-align:left;">
@@ -6904,9 +6581,6 @@ Other 2015 Annual Costs for the selected vessel (not listed in previous sections
 </td>
 <td style="text-align:left;">
 Cost values 1 and 2 are combined and and reported as a single variable given limited data. No descriptions were provided by survey respondents.
-</td>
-<td style="text-align:left;">
-“Other costs for the selected vessel that were not asked in the survey. This includes a combined value for all values provided given that no descriptions were provided despite being asked on the survey.”
 </td>
 </tr>
 <tr>
@@ -6922,9 +6596,6 @@ Other 2015 Annual Costs for the entire fishing business (not listed in previous 
 <td style="text-align:left;">
 Cost values 1 and 2 are combined and and reported as a single variable given limited data. No descriptions were provided by survey respondents.
 </td>
-<td style="text-align:left;">
-NA
-</td>
 </tr>
 <tr>
 <td style="text-align:left;">
@@ -6935,9 +6606,6 @@ NUMBER(1,0)
 </td>
 <td style="text-align:left;">
 Source of costs provided in the survey. Use lookup table VCS_INFO_SOURCES for key (examples include directly from records, best estimates, or both)
-</td>
-<td style="text-align:left;">
-NA
 </td>
 <td style="text-align:left;">
 NA
@@ -6956,9 +6624,6 @@ Would you be interested in attending a presentation on profitability profiles in
 <td style="text-align:left;">
 Is respondent willing to attend profitability presentation
 </td>
-<td style="text-align:left;">
-NA
-</td>
 </tr>
 <tr>
 <td style="text-align:left;">
@@ -6969,9 +6634,6 @@ NUMBER(1,0)
 </td>
 <td style="text-align:left;">
 Can we contact you if we have any follow up questions (YES=1 NO=0)
-</td>
-<td style="text-align:left;">
-NA
 </td>
 <td style="text-align:left;">
 NA
@@ -6990,9 +6652,6 @@ Vessel Cost Survey Respondent identification number
 <td style="text-align:left;">
 NA
 </td>
-<td style="text-align:left;">
-NA
-</td>
 </tr>
 <tr>
 <td style="text-align:left;">
@@ -7003,9 +6662,6 @@ VARCHAR2(4000 BYTE)
 </td>
 <td style="text-align:left;">
 Comments from the survey participant recorded at the end of the survey
-</td>
-<td style="text-align:left;">
-NA
 </td>
 <td style="text-align:left;">
 NA
@@ -7024,20 +6680,10 @@ Imputed number of vessels owned based on the PERSON_ID variable, in the case num
 <td style="text-align:left;">
 Imputed number of vessels
 </td>
-<td style="text-align:left;">
-NA
-</td>
 </tr>
 </tbody>
 </table>
 </div>
-
-<p>#Additional Info</p>
-<p>Cost data visualization tool <a href="https://apps-nefsc.fisheries.noaa.gov/socialsci/cost-data/" class="uri">https://apps-nefsc.fisheries.noaa.gov/socialsci/cost-data/</a></p>
-<p>Cost Survey 2011-2015 Tech Memo
-<a href="https://apps-nefsc.fisheries.noaa.gov/socialsci/cost-data/assets/pdf/Manuscript_SSB_Cost_Survey_Results.pdf" class="uri">https://apps-nefsc.fisheries.noaa.gov/socialsci/cost-data/assets/pdf/Manuscript_SSB_Cost_Survey_Results.pdf</a></p>
-<p>Cost Survey Website
-<a href="https://www.fisheries.noaa.gov/new-england-mid-atlantic/commercial-fishing/commercial-fishing-business-cost-survey" class="uri">https://www.fisheries.noaa.gov/new-england-mid-atlantic/commercial-fishing/commercial-fishing-business-cost-survey</a></p>
 
 </div>
 </div>
@@ -7046,8 +6692,8 @@ NA
           </div>
         </div>
       </div>
-<a href="index.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="additional-info.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

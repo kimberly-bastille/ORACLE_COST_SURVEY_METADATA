@@ -22,8 +22,8 @@ VCS_Common_Vars <- read_excel("ORACLE_METADATA.xlsx", sheet = "VCS_COMMON_VARIAB
 COMVAR<-VCS_Common_Vars
 #COMVAR %>%
   kbl(COMVAR, "html", caption = 'VCS_COMMON_VARIABLES_MV METADATA') %>%
- kable_styling(bootstrap_options = c("striped", "hover")) %>%
-  scroll_box(width = "1000px", height = "500px")
+ kable_styling(bootstrap_options = c("striped", "hover", "condensed", full_width=F)) %>%
+  scroll_box(width = "700px", height = "400px")
 ```
 
 
@@ -50,8 +50,8 @@ VCS_COST2011 <- read_excel("ORACLE_METADATA.xlsx", sheet = "VCS_COST2011")
 cost2011<-VCS_COST2011
 #COMVAR %>%
   kbl(cost2011, "html", caption = 'VCS_COST2011 METADATA') %>%
- kable_styling(bootstrap_options = c("striped", "hover")) %>%
-  scroll_box(width = "1000px", height = "500px")
+ kable_styling(bootstrap_options = c("striped", "hover", "condensed", full_width=F)) %>%
+  scroll_box(width = "700px", height = "400px")
 ```
 
 
@@ -80,8 +80,8 @@ VCS_COST2012 <- read_excel("ORACLE_METADATA.xlsx", sheet = "VCS_COST2012")
 cost2012<-VCS_COST2012
 #COMVAR %>%
   kbl(cost2012, "html", caption ='VCS_COST2012 METADATA') %>%
- kable_styling(bootstrap_options = c("striped", "hover")) %>%
-  scroll_box(width = "1000px", height = "500px")
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed", full_width=F)) %>%
+  scroll_box(width = "700px", height = "400px")
 ```
 
 
@@ -109,8 +109,8 @@ VCS_COST2015 <- read_excel("ORACLE_METADATA.xlsx", sheet = "VCS_COST2015")
 cost2015<-VCS_COST2015
 #COMVAR %>%
   kbl(cost2015, "html", caption ='VCS_COST2015 METADATA') %>%
- kable_styling(bootstrap_options = c("striped", "hover")) %>%
-  scroll_box(width = "1000px", height = "500px")
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed", full_width=F)) %>%
+  scroll_box(width = "700px", height = "400px")
 ```
 
 
