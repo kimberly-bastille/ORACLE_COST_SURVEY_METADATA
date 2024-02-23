@@ -1,6 +1,8 @@
 bookdown::gitbook:
   css: style.css
   config:
+      toolbar:
+      position: static
     toc:
       before: |
         <li><a href="./">Oracle Cost Survey Metadata</a></li>
