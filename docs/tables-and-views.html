@@ -31,7 +31,7 @@
   
   
 <link rel="prev" href="index.html"/>
-<link rel="next" href="additional-info.html"/>
+<link rel="next" href="support-tables.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -91,7 +91,17 @@
 <li class="chapter" data-level="2.3" data-path="tables-and-views.html"><a href="tables-and-views.html#vcs_cost2012"><i class="fa fa-check"></i><b>2.3</b> VCS_COST2012</a></li>
 <li class="chapter" data-level="2.4" data-path="tables-and-views.html"><a href="tables-and-views.html#vcs_cost2015"><i class="fa fa-check"></i><b>2.4</b> VCS_COST2015</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="additional-info.html"><a href="additional-info.html"><i class="fa fa-check"></i><b>3</b> Additional Info</a></li>
+<li class="chapter" data-level="3" data-path="support-tables.html"><a href="support-tables.html"><i class="fa fa-check"></i><b>3</b> Support Tables</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="support-tables.html"><a href="support-tables.html#vcs_captain_status"><i class="fa fa-check"></i><b>3.1</b> VCS_CAPTAIN_STATUS</a></li>
+<li class="chapter" data-level="3.2" data-path="support-tables.html"><a href="support-tables.html#vcs_gears"><i class="fa fa-check"></i><b>3.2</b> VCS_GEARS</a></li>
+<li class="chapter" data-level="3.3" data-path="support-tables.html"><a href="support-tables.html#vcs_info_source"><i class="fa fa-check"></i><b>3.3</b> VCS_INFO_SOURCE</a></li>
+<li class="chapter" data-level="3.4" data-path="support-tables.html"><a href="support-tables.html#vcs_crew_payment_systems"><i class="fa fa-check"></i><b>3.4</b> VCS_CREW_PAYMENT_SYSTEMS</a></li>
+<li class="chapter" data-level="3.5" data-path="support-tables.html"><a href="support-tables.html#vcs_status_options"><i class="fa fa-check"></i><b>3.5</b> VCS_STATUS_OPTIONS</a></li>
+<li class="chapter" data-level="3.6" data-path="support-tables.html"><a href="support-tables.html#vcs_survey_details"><i class="fa fa-check"></i><b>3.6</b> VCS_SURVEY_DETAILS</a></li>
+<li class="chapter" data-level="3.7" data-path="support-tables.html"><a href="support-tables.html#vcs_cost_categories"><i class="fa fa-check"></i><b>3.7</b> VCS_COST_CATEGORIES</a></li>
+<li class="chapter" data-level="3.8" data-path="support-tables.html"><a href="support-tables.html#vcs_cost_categories-1"><i class="fa fa-check"></i><b>3.8</b> VCS_COST_CATEGORIES</a></li>
+</ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -116,7 +126,7 @@
 <h1><span class="header-section-number">Chapter 2</span> Tables and Views<a href="tables-and-views.html#tables-and-views" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <div id="vcs_common_varaibles_mv" class="section level2 hasAnchor" number="2.1">
 <h2><span class="header-section-number">2.1</span> VCS_COMMON_VARAIBLES_MV<a href="tables-and-views.html#vcs_common_varaibles_mv" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p><strong>Description:</strong> This view presents common variables collected from the cost survey over time. Values are presented at the annual vessel-level for the year in which they were queried unless otherwise noted (nominal dollars). To be considered a common variable, the variable must appear in two or more cost surveys over time. Given that the survey instrument changed over time, there may be slight discrepancies in the variable over time. Please see the comments for further clarification.</p>
+<p><strong>Description:</strong> This view presents common variables collected from the cost survey over time. Values are presented at the annual vessel-level for the year in which they were queried unless otherwise noted (nominal dollars). To be considered a common variable, the variable must appear in two or more cost surveys over time. Given that the survey instrument changed over time, there may be slight discrepancies in the variable over time. Please see the comments for further clarification.The primary key is HULLNUM and SURVEY_YEAR (not VESSEL_NAME.</p>
 <p><strong>Data warnings:</strong> Crew_Pymts in this year contains both crew and captain payments. Captain_Pymts is null but retained for the cost data application reasons.</p>
 <div style="border: 1px solid #ddd; padding: 0px; overflow-y: scroll; height:400px; overflow-x: scroll; width:700px; ">
 <table class="table table-striped table-hover table-condensed" style="margin-left: auto; margin-right: auto;">
@@ -1595,7 +1605,7 @@ NA
 </div>
 <div id="vcs_cost2011" class="section level2 hasAnchor" number="2.2">
 <h2><span class="header-section-number">2.2</span> VCS_COST2011<a href="tables-and-views.html#vcs_cost2011" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p><strong>Description:</strong> This view presents common variables collected from the cost survey over time. Values are presented at the annual vessel-level for the year in which they were queried unless otherwise noted (nominal dollars). To be considered a common variable, the variable must appear in two or more cost surveys over time. Given that the survey instrument changed over time, there may be slight discrepancies in the variable over time. Please see the comments for further clarification.</p>
+<p><strong>Description:</strong> This view presents common variables collected from the cost survey over time. Values are presented at the annual vessel-level for the year in which they were queried unless otherwise noted (nominal dollars). To be considered a common variable, the variable must appear in two or more cost surveys over time. Given that the survey instrument changed over time, there may be slight discrepancies in the variable over time. Please see the comments for further clarification. The primary key is HULLNUM and SURVEY_YEAR (not VESSEL_NAME.</p>
 <p><strong>Data warnings:</strong> Crew_Pymts in this year contains both crew and captain payments. Captain_Pymts is null but retained for the cost data application reasons.</p>
 <div style="border: 1px solid #ddd; padding: 0px; overflow-y: scroll; height:400px; overflow-x: scroll; width:700px; ">
 <table class="table table-striped table-hover table-condensed" style="margin-left: auto; margin-right: auto;">
@@ -3199,7 +3209,7 @@ NA
 </div>
 <div id="vcs_cost2012" class="section level2 hasAnchor" number="2.3">
 <h2><span class="header-section-number">2.3</span> VCS_COST2012<a href="tables-and-views.html#vcs_cost2012" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p><strong>Description:</strong> This is the cleaned data collected from the SSB 2012 cost survey. The costs were mostly at the vessel-level, however, some business-level costs which are described in the data warnings section. The data has been cleaned as described in the Cost Survey Tech Memo. All costs are presented in nominal dollars.</p>
+<p><strong>Description:</strong> This is the cleaned data collected from the SSB 2012 cost survey. The costs were mostly at the vessel-level, however, some business-level costs which are described in the data warnings section. The data has been cleaned as described in the Cost Survey Tech Memo. All costs are presented in nominal dollars.The primary key is HULLNUM and SURVEY_YEAR (not VESSEL_NAME.</p>
 <p><strong>Data Warnings:</strong> All overhead cost variables are collected for all vessels rather than the vessel-level. This includes the following variables: SHOP_EXP , OFFICE_EXP , VEHICLE_USAGE_COST , BUSINESS_TRAVEL_COST, ASSOCIATION_FEES , PROFESSIONAL_FEES, BUS_LOAN_PRINCIPAL_COST, BUS_LOAN_INTEREST_COST, ADVERTISING_COST , and NONCREW_LABOR_COST</p>
 <div style="border: 1px solid #ddd; padding: 0px; overflow-y: scroll; height:400px; overflow-x: scroll; width:700px; ">
 <table class="table table-striped table-hover table-condensed" style="margin-left: auto; margin-right: auto;">
@@ -3220,9 +3230,6 @@ Description
 <th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
 Notes
 </th>
-<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
-…5
-</th>
 </tr>
 </thead>
 <tbody>
@@ -3235,9 +3242,6 @@ VARCHAR2(30 BYTE)
 </td>
 <td style="text-align:left;">
 Official vessel registration number
-</td>
-<td style="text-align:left;">
-NA
 </td>
 <td style="text-align:left;">
 NA
@@ -3256,9 +3260,6 @@ Calendar year for which costs were collected (not the year the survey was admini
 <td style="text-align:left;">
 NA
 </td>
-<td style="text-align:left;">
-NA
-</td>
 </tr>
 <tr>
 <td style="text-align:left;">
@@ -3269,9 +3270,6 @@ VARCHAR2(40 BYTE)
 </td>
 <td style="text-align:left;">
 Primary gear type based on majority revenues earned in 2012
-</td>
-<td style="text-align:left;">
-NA
 </td>
 <td style="text-align:left;">
 NA
@@ -3290,9 +3288,6 @@ Survey sampling stratification based on the gear type and vessel length (where �
 <td style="text-align:left;">
 NA
 </td>
-<td style="text-align:left;">
-NA
-</td>
 </tr>
 <tr>
 <td style="text-align:left;">
@@ -3303,9 +3298,6 @@ NUMBER(1,0)
 </td>
 <td style="text-align:left;">
 Mode for which the survey was completed (0-online response; 1 - mail response)
-</td>
-<td style="text-align:left;">
-NA
 </td>
 <td style="text-align:left;">
 NA
@@ -3324,9 +3316,6 @@ Survey completeness (complete, partial) where partial is defined as an individua
 <td style="text-align:left;">
 NA
 </td>
-<td style="text-align:left;">
-NA
-</td>
 </tr>
 <tr>
 <td style="text-align:left;">
@@ -3337,9 +3326,6 @@ VARCHAR2(80 BYTE)
 </td>
 <td style="text-align:left;">
 Vessel name
-</td>
-<td style="text-align:left;">
-NA
 </td>
 <td style="text-align:left;">
 NA
@@ -3358,9 +3344,6 @@ Ownership type for the vessel (corporation, sole proprietorship, etc.) If other 
 <td style="text-align:left;">
 NA
 </td>
-<td style="text-align:left;">
-NA
-</td>
 </tr>
 <tr>
 <td style="text-align:left;">
@@ -3371,9 +3354,6 @@ NUMBER(2,0)
 </td>
 <td style="text-align:left;">
 Number of owners of the vessel (including the vessel owner to whom the survey was sent)
-</td>
-<td style="text-align:left;">
-NA
 </td>
 <td style="text-align:left;">
 NA
@@ -3392,9 +3372,6 @@ Vessel condition when acquired: New or Used
 <td style="text-align:left;">
 NA
 </td>
-<td style="text-align:left;">
-NA
-</td>
 </tr>
 <tr>
 <td style="text-align:left;">
@@ -3405,9 +3382,6 @@ NUMBER(4,0)
 </td>
 <td style="text-align:left;">
 Calendar year the vessel owner became the vessel owner
-</td>
-<td style="text-align:left;">
-NA
 </td>
 <td style="text-align:left;">
 NA
@@ -3426,9 +3400,6 @@ Estimated market value of the vessel, including all equipment, fishing gear, per
 <td style="text-align:left;">
 NA
 </td>
-<td style="text-align:left;">
-NA
-</td>
 </tr>
 <tr>
 <td style="text-align:left;">
@@ -3439,9 +3410,6 @@ CHAR(1 BYTE)
 </td>
 <td style="text-align:left;">
 Was the vessel hauled out for any reason (1–Yes 0—No)
-</td>
-<td style="text-align:left;">
-NA
 </td>
 <td style="text-align:left;">
 NA
@@ -3460,9 +3428,6 @@ Cost of haul out in 2012 including taking the vessel out of the water and any tr
 <td style="text-align:left;">
 NA
 </td>
-<td style="text-align:left;">
-NA
-</td>
 </tr>
 <tr>
 <td style="text-align:left;">
@@ -3473,9 +3438,6 @@ VARCHAR2(100 BYTE)
 </td>
 <td style="text-align:left;">
 Frequency of haul out events ( Haul out frequency every year, every other year, every x years every x months ) This also includes values from “other” given that they often fit the descriptions listed
-</td>
-<td style="text-align:left;">
-NA
 </td>
 <td style="text-align:left;">
 NA
@@ -3494,9 +3456,6 @@ Vessel repair and maintenance costs such as engine, drive train, exhaust/cooling
 <td style="text-align:left;">
 NA
 </td>
-<td style="text-align:left;">
-NA
-</td>
 </tr>
 <tr>
 <td style="text-align:left;">
@@ -3507,9 +3466,6 @@ NUMBER(9,0)
 </td>
 <td style="text-align:left;">
 Upgrade and improvement costs for the engine such as engine, drive train, exhaust/cooling systems
-</td>
-<td style="text-align:left;">
-NA
 </td>
 <td style="text-align:left;">
 NA
@@ -3528,9 +3484,6 @@ Repair and maintenance deck equipment/other costs such as winches, haulers, gene
 <td style="text-align:left;">
 NA
 </td>
-<td style="text-align:left;">
-NA
-</td>
 </tr>
 <tr>
 <td style="text-align:left;">
@@ -3541,9 +3494,6 @@ NUMBER(9,0)
 </td>
 <td style="text-align:left;">
 Upgrade and improvement deck equipment/other costs such as winches, haulers, generators, hydraulics, compressors, reels, pumps
-</td>
-<td style="text-align:left;">
-NA
 </td>
 <td style="text-align:left;">
 NA
@@ -3562,9 +3512,6 @@ Hull repair and maintenance costs such as frame, deck, wheelhouse, keel, steerin
 <td style="text-align:left;">
 NA
 </td>
-<td style="text-align:left;">
-NA
-</td>
 </tr>
 <tr>
 <td style="text-align:left;">
@@ -3575,9 +3522,6 @@ NUMBER(9,0)
 </td>
 <td style="text-align:left;">
 Hull upgrade and improvement costs such as frame, deck, wheelhouse, keel, steering, rigging, fish holds, fuel tanks
-</td>
-<td style="text-align:left;">
-NA
 </td>
 <td style="text-align:left;">
 NA
@@ -3596,9 +3540,6 @@ Repair and maintenance cost for fishing gear such as codends, nets/panels, dredg
 <td style="text-align:left;">
 NA
 </td>
-<td style="text-align:left;">
-NA
-</td>
 </tr>
 <tr>
 <td style="text-align:left;">
@@ -3609,9 +3550,6 @@ NUMBER(9,0)
 </td>
 <td style="text-align:left;">
 Upgrade and improvement costs for fishing gear such as codends, nets/panels, dredges, buoys, highfliers, doors, pots/traps, cables
-</td>
-<td style="text-align:left;">
-NA
 </td>
 <td style="text-align:left;">
 NA
@@ -3630,9 +3568,6 @@ Upgrade and improvement cost descriptions
 <td style="text-align:left;">
 NA
 </td>
-<td style="text-align:left;">
-NA
-</td>
 </tr>
 <tr>
 <td style="text-align:left;">
@@ -3643,9 +3578,6 @@ NUMBER(9,0)
 </td>
 <td style="text-align:left;">
 Repair and maintenance costs for Wheelhouse and gear electronics such as Radar, GPS, VMS, sounder, radio, depth/temperature/net sensors
-</td>
-<td style="text-align:left;">
-NA
 </td>
 <td style="text-align:left;">
 NA
@@ -3664,9 +3596,6 @@ Upgrade and improvement costs for Wheelhouse and gear electronics such as Radar,
 <td style="text-align:left;">
 NA
 </td>
-<td style="text-align:left;">
-NA
-</td>
 </tr>
 <tr>
 <td style="text-align:left;">
@@ -3677,9 +3606,6 @@ NUMBER(9,0)
 </td>
 <td style="text-align:left;">
 Repair and maintenance costs for processing/refrigeration, such as RSW, packaging equipment, ice maker
-</td>
-<td style="text-align:left;">
-NA
 </td>
 <td style="text-align:left;">
 NA
@@ -3698,9 +3624,6 @@ Upgrade and improvement costs for processing/refrigeration, such as RSW, packagi
 <td style="text-align:left;">
 NA
 </td>
-<td style="text-align:left;">
-NA
-</td>
 </tr>
 <tr>
 <td style="text-align:left;">
@@ -3711,9 +3634,6 @@ NUMBER(9,0)
 </td>
 <td style="text-align:left;">
 Repair and maintenance costs for safety equipment such as EPIRB, rafts, fire extinguishers, flares, survival suits
-</td>
-<td style="text-align:left;">
-NA
 </td>
 <td style="text-align:left;">
 NA
@@ -3732,9 +3652,6 @@ Upgrade and improvement costs for safety equipment such as EPIRB, rafts, fire ex
 <td style="text-align:left;">
 NA
 </td>
-<td style="text-align:left;">
-NA
-</td>
 </tr>
 <tr>
 <td style="text-align:left;">
@@ -3745,9 +3662,6 @@ NUMBER(9,0)
 </td>
 <td style="text-align:left;">
 Other repair and maintenance costs not listed
-</td>
-<td style="text-align:left;">
-NA
 </td>
 <td style="text-align:left;">
 NA
@@ -3766,9 +3680,6 @@ Other upgrade and improvement costs not listed
 <td style="text-align:left;">
 NA
 </td>
-<td style="text-align:left;">
-NA
-</td>
 </tr>
 <tr>
 <td style="text-align:left;">
@@ -3779,9 +3690,6 @@ NUMBER(9,0)
 </td>
 <td style="text-align:left;">
 Mooring/Dockage Fees for this vessel in 2012 including upkeep expenses
-</td>
-<td style="text-align:left;">
-NA
 </td>
 <td style="text-align:left;">
 NA
@@ -3800,9 +3708,6 @@ Permit and/or License fees
 <td style="text-align:left;">
 NA
 </td>
-<td style="text-align:left;">
-NA
-</td>
 </tr>
 <tr>
 <td style="text-align:left;">
@@ -3813,9 +3718,6 @@ NUMBER(9,0)
 </td>
 <td style="text-align:left;">
 Vessel Insurance Premium in 2012 for this vessel premium paid for either hull or P &amp; I insurance
-</td>
-<td style="text-align:left;">
-NA
 </td>
 <td style="text-align:left;">
 NA
@@ -3834,9 +3736,6 @@ Number of months insured
 <td style="text-align:left;">
 NA
 </td>
-<td style="text-align:left;">
-NA
-</td>
 </tr>
 <tr>
 <td style="text-align:left;">
@@ -3847,9 +3746,6 @@ NUMBER(9,0)
 </td>
 <td style="text-align:left;">
 Quota or DAS lease-in costs including estimated value of non-monetary payments
-</td>
-<td style="text-align:left;">
-NA
 </td>
 <td style="text-align:left;">
 NA
@@ -3868,9 +3764,6 @@ Total payment made to all crew (excluding hired captain)
 <td style="text-align:left;">
 NA
 </td>
-<td style="text-align:left;">
-NA
-</td>
 </tr>
 <tr>
 <td style="text-align:left;">
@@ -3881,9 +3774,6 @@ NUMBER(9,0)
 </td>
 <td style="text-align:left;">
 Total payment made to hired captain
-</td>
-<td style="text-align:left;">
-NA
 </td>
 <td style="text-align:left;">
 NA
@@ -3902,9 +3792,6 @@ Crew Benefits for the vessel provided by the owner, including providing retireme
 <td style="text-align:left;">
 NA
 </td>
-<td style="text-align:left;">
-NA
-</td>
 </tr>
 <tr>
 <td style="text-align:left;">
@@ -3915,9 +3802,6 @@ NUMBER(9,0)
 </td>
 <td style="text-align:left;">
 Vessel Activity/Quota Monitoring Cost for this vessel in 2012 (such as observer or dockside monitoring cost):
-</td>
-<td style="text-align:left;">
-NA
 </td>
 <td style="text-align:left;">
 NA
@@ -3936,9 +3820,6 @@ Other costs for the vessel not listed in the vessel cost section
 <td style="text-align:left;">
 NA
 </td>
-<td style="text-align:left;">
-NA
-</td>
 </tr>
 <tr>
 <td style="text-align:left;">
@@ -3949,9 +3830,6 @@ NUMBER(3,0)
 </td>
 <td style="text-align:left;">
 Number of vessels the fishing business operated or maintained in 2012
-</td>
-<td style="text-align:left;">
-NA
 </td>
 <td style="text-align:left;">
 NA
@@ -3970,9 +3848,6 @@ Workshop/Storage Expenses for all vessels
 <td style="text-align:left;">
 Costs in this section were for “ALL VESSELS” and the average vessel level cost can be obtained by dividing by the number of vessels owned (VESSEL_NUM)
 </td>
-<td style="text-align:left;">
-NA
-</td>
 </tr>
 <tr>
 <td style="text-align:left;">
@@ -3983,9 +3858,6 @@ NUMBER(9,0)
 </td>
 <td style="text-align:left;">
 Office Expenses for all vessels such as office supplies, office rental, home office, office utilities (electric, heat etc.), postage, photocopying, computer etc; exclude communication costs
-</td>
-<td style="text-align:left;">
-NA
 </td>
 <td style="text-align:left;">
 NA
@@ -4004,9 +3876,6 @@ Business Vehicle Usage Costs in 2012 for all vessels only for fishing business r
 <td style="text-align:left;">
 NA
 </td>
-<td style="text-align:left;">
-NA
-</td>
 </tr>
 <tr>
 <td style="text-align:left;">
@@ -4017,9 +3886,6 @@ NUMBER(9,0)
 </td>
 <td style="text-align:left;">
 Business Travel Costs for all vessels only (such as cost of lodging, travel, and transportation for business associated travel excluding business vehicle costs)
-</td>
-<td style="text-align:left;">
-NA
 </td>
 <td style="text-align:left;">
 NA
@@ -4038,9 +3904,6 @@ Association Fees Paid across all vessels such as co-operative, fishing organizat
 <td style="text-align:left;">
 NA
 </td>
-<td style="text-align:left;">
-NA
-</td>
 </tr>
 <tr>
 <td style="text-align:left;">
@@ -4051,9 +3914,6 @@ NUMBER(9,0)
 </td>
 <td style="text-align:left;">
 Professional Fees Paid for all vessels such as settlement, accounting, legal fees
-</td>
-<td style="text-align:left;">
-NA
 </td>
 <td style="text-align:left;">
 NA
@@ -4072,9 +3932,6 @@ Principal Paid on Business Loans across all vessels
 <td style="text-align:left;">
 NA
 </td>
-<td style="text-align:left;">
-NA
-</td>
 </tr>
 <tr>
 <td style="text-align:left;">
@@ -4085,9 +3942,6 @@ NUMBER(9,0)
 </td>
 <td style="text-align:left;">
 Interest Paid on Business Loan across all vessels
-</td>
-<td style="text-align:left;">
-NA
 </td>
 <td style="text-align:left;">
 NA
@@ -4106,9 +3960,6 @@ Cost of advertising across all vessels
 <td style="text-align:left;">
 NA
 </td>
-<td style="text-align:left;">
-NA
-</td>
 </tr>
 <tr>
 <td style="text-align:left;">
@@ -4119,9 +3970,6 @@ NUMBER(9,0)
 </td>
 <td style="text-align:left;">
 Non-crew Labor Services costs for all owned vessels such as night watchman, office secretary etc
-</td>
-<td style="text-align:left;">
-NA
 </td>
 <td style="text-align:left;">
 NA
@@ -4140,9 +3988,6 @@ Total annual fuel costs including oil and filters for the selected vessel in 201
 <td style="text-align:left;">
 NA
 </td>
-<td style="text-align:left;">
-NA
-</td>
 </tr>
 <tr>
 <td style="text-align:left;">
@@ -4153,9 +3998,6 @@ NUMBER(9,0)
 </td>
 <td style="text-align:left;">
 Total annual food and drinking water costs for the selected vessel in 2012
-</td>
-<td style="text-align:left;">
-NA
 </td>
 <td style="text-align:left;">
 NA
@@ -4174,9 +4016,6 @@ Total annual ice costs for the selected vessel in 2012
 <td style="text-align:left;">
 NA
 </td>
-<td style="text-align:left;">
-NA
-</td>
 </tr>
 <tr>
 <td style="text-align:left;">
@@ -4187,9 +4026,6 @@ NUMBER(9,0)
 </td>
 <td style="text-align:left;">
 Total annual bait costs for the selected vessel in 2012
-</td>
-<td style="text-align:left;">
-NA
 </td>
 <td style="text-align:left;">
 NA
@@ -4208,9 +4044,6 @@ Total annual water costs for the selected vessel in 2012
 <td style="text-align:left;">
 NA
 </td>
-<td style="text-align:left;">
-NA
-</td>
 </tr>
 <tr>
 <td style="text-align:left;">
@@ -4221,9 +4054,6 @@ NUMBER(9,0)
 </td>
 <td style="text-align:left;">
 Total annual communication costs such as cell phones, radio, VMS etc. for the selected vessel in 2012
-</td>
-<td style="text-align:left;">
-NA
 </td>
 <td style="text-align:left;">
 NA
@@ -4242,9 +4072,6 @@ Total annual cost for general fishing supplies such as knives, picks, hooks, box
 <td style="text-align:left;">
 NA
 </td>
-<td style="text-align:left;">
-NA
-</td>
 </tr>
 <tr>
 <td style="text-align:left;">
@@ -4255,9 +4082,6 @@ NUMBER(9,0)
 </td>
 <td style="text-align:left;">
 Total annual cost for crew supply costs such as gloves, boot liners, foul weather gear etc. for the selected vessel in 2012
-</td>
-<td style="text-align:left;">
-NA
 </td>
 <td style="text-align:left;">
 NA
@@ -4276,9 +4100,6 @@ Total annual catch handling costs such as auction, lumping, grading, shipping et
 <td style="text-align:left;">
 NA
 </td>
-<td style="text-align:left;">
-NA
-</td>
 </tr>
 <tr>
 <td style="text-align:left;">
@@ -4289,9 +4110,6 @@ NUMBER(9,0)
 </td>
 <td style="text-align:left;">
 Other operating costs not listed above for the selected vessel in 2012
-</td>
-<td style="text-align:left;">
-NA
 </td>
 <td style="text-align:left;">
 NA
@@ -4310,9 +4128,6 @@ Captain type for the majority of trips taken in 2012 see the lookup table VCS_CA
 <td style="text-align:left;">
 NA
 </td>
-<td style="text-align:left;">
-NA
-</td>
 </tr>
 <tr>
 <td style="text-align:left;">
@@ -4323,9 +4138,6 @@ NUMBER(4,0)
 </td>
 <td style="text-align:left;">
 Average number of crew members, not including the captain, in 2012
-</td>
-<td style="text-align:left;">
-NA
 </td>
 <td style="text-align:left;">
 NA
@@ -4344,9 +4156,6 @@ Expenses deducted from gross revenues before distribution (in terms of the types
 <td style="text-align:left;">
 NA
 </td>
-<td style="text-align:left;">
-NA
-</td>
 </tr>
 <tr>
 <td style="text-align:left;">
@@ -4357,9 +4166,6 @@ NUMBER(5,2)
 </td>
 <td style="text-align:left;">
 Percent of gross revenues that are allocated to the boat in a share system
-</td>
-<td style="text-align:left;">
-NA
 </td>
 <td style="text-align:left;">
 NA
@@ -4378,9 +4184,6 @@ Percent of gross revenues that are allocated to the crew in a share system
 <td style="text-align:left;">
 NA
 </td>
-<td style="text-align:left;">
-NA
-</td>
 </tr>
 <tr>
 <td style="text-align:left;">
@@ -4391,9 +4194,6 @@ NUMBER(5,2)
 </td>
 <td style="text-align:left;">
 Percent of gross revenues that are allocated to the captain in a share system
-</td>
-<td style="text-align:left;">
-NA
 </td>
 <td style="text-align:left;">
 NA
@@ -4412,9 +4212,6 @@ Expenses deducted from the crews share (type of expenses, not the amount)
 <td style="text-align:left;">
 NA
 </td>
-<td style="text-align:left;">
-NA
-</td>
 </tr>
 <tr>
 <td style="text-align:left;">
@@ -4425,9 +4222,6 @@ VARCHAR2(2000 BYTE)
 </td>
 <td style="text-align:left;">
 Expenses deducted from the captain’s share (type of expenses, not the amount)
-</td>
-<td style="text-align:left;">
-NA
 </td>
 <td style="text-align:left;">
 NA
@@ -4446,9 +4240,6 @@ Types of purchases made by crew themselves (“food on day boats”, “foul wea
 <td style="text-align:left;">
 NA
 </td>
-<td style="text-align:left;">
-NA
-</td>
 </tr>
 <tr>
 <td style="text-align:left;">
@@ -4459,9 +4250,6 @@ VARCHAR2(2000 BYTE)
 </td>
 <td style="text-align:left;">
 Description of alternative crew payment system, if the share system was not appropriate
-</td>
-<td style="text-align:left;">
-NA
 </td>
 <td style="text-align:left;">
 NA
@@ -4480,9 +4268,6 @@ Other 2012 Annual Costs for the selected vessel (not listed in previous sections
 <td style="text-align:left;">
 No descriptions of these costs were provided by respondents
 </td>
-<td style="text-align:left;">
-***Group to revisit this, Elizabeth will look into whether the costs are costs or descriptions and this should be reflected in Oracle
-</td>
 </tr>
 <tr>
 <td style="text-align:left;">
@@ -4496,9 +4281,6 @@ Other 2012 Annual Costs for the selected vessel (not listed in previous sections
 </td>
 <td style="text-align:left;">
 No descriptions of these costs were provided by respondents
-</td>
-<td style="text-align:left;">
-NA
 </td>
 </tr>
 <tr>
@@ -4514,9 +4296,6 @@ Other 2012 Annual Costs for the entire business (not listed in previous sections
 <td style="text-align:left;">
 No descriptions of these costs were provided by respondents
 </td>
-<td style="text-align:left;">
-NA
-</td>
 </tr>
 <tr>
 <td style="text-align:left;">
@@ -4531,14 +4310,8 @@ Other 2012 Annual Costs for the entire business (not listed in previous sections
 <td style="text-align:left;">
 No descriptions of these costs were provided by respondents
 </td>
-<td style="text-align:left;">
-NA
-</td>
 </tr>
 <tr>
-<td style="text-align:left;">
-NA
-</td>
 <td style="text-align:left;">
 NA
 </td>
@@ -4565,9 +4338,6 @@ Personal health insurance, yes, no I don’t have health insurance, no I am cove
 <td style="text-align:left;">
 NA
 </td>
-<td style="text-align:left;">
-NA
-</td>
 </tr>
 <tr>
 <td style="text-align:left;">
@@ -4578,9 +4348,6 @@ NUMBER(9,0)
 </td>
 <td style="text-align:left;">
 Cost if they did have personal health insurance
-</td>
-<td style="text-align:left;">
-NA
 </td>
 <td style="text-align:left;">
 NA
@@ -4599,9 +4366,6 @@ Gross revenue from commercial trips
 <td style="text-align:left;">
 NA
 </td>
-<td style="text-align:left;">
-NA
-</td>
 </tr>
 <tr>
 <td style="text-align:left;">
@@ -4612,9 +4376,6 @@ NUMBER(9,0)
 </td>
 <td style="text-align:left;">
 Gross revenue from non-commercial trips (e.g. charter trips)
-</td>
-<td style="text-align:left;">
-NA
 </td>
 <td style="text-align:left;">
 NA
@@ -4633,9 +4394,6 @@ Vessel was inactive from (Derived from question 14 checkbox option)
 <td style="text-align:left;">
 NA
 </td>
-<td style="text-align:left;">
-NA
-</td>
 </tr>
 <tr>
 <td style="text-align:left;">
@@ -4646,9 +4404,6 @@ VARCHAR2(4000 BYTE)
 </td>
 <td style="text-align:left;">
 Comments by survey taker listed at end of the survey
-</td>
-<td style="text-align:left;">
-NA
 </td>
 <td style="text-align:left;">
 NA
@@ -4667,31 +4422,8 @@ Imputed number of vessels owned based on the PERSON_ID variable, in the case num
 <td style="text-align:left;">
 NA
 </td>
-<td style="text-align:left;">
-NA
-</td>
 </tr>
 <tr>
-<td style="text-align:left;">
-NA
-</td>
-<td style="text-align:left;">
-NA
-</td>
-<td style="text-align:left;">
-NA
-</td>
-<td style="text-align:left;">
-NA
-</td>
-<td style="text-align:left;">
-NA
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-NA
-</td>
 <td style="text-align:left;">
 NA
 </td>
@@ -4718,31 +4450,8 @@ NA
 <td style="text-align:left;">
 NA
 </td>
-<td style="text-align:left;">
-NA
-</td>
 </tr>
 <tr>
-<td style="text-align:left;">
-NA
-</td>
-<td style="text-align:left;">
-NA
-</td>
-<td style="text-align:left;">
-NA
-</td>
-<td style="text-align:left;">
-NA
-</td>
-<td style="text-align:left;">
-NA
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-NA
-</td>
 <td style="text-align:left;">
 NA
 </td>
@@ -4769,6 +4478,17 @@ NA
 <td style="text-align:left;">
 NA
 </td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+NA
+</td>
 <td style="text-align:left;">
 NA
 </td>
@@ -4777,6 +4497,17 @@ NA
 <td style="text-align:left;">
 NA
 </td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
 <td style="text-align:left;">
 NA
 </td>
@@ -4803,9 +4534,6 @@ NA
 <td style="text-align:left;">
 NA
 </td>
-<td style="text-align:left;">
-NA
-</td>
 </tr>
 <tr>
 <td style="text-align:left;">
@@ -4816,9 +4544,6 @@ VARCHAR2(500 BYTE)
 </td>
 <td style="text-align:left;">
 Upgrade and improvement costs description
-</td>
-<td style="text-align:left;">
-NA
 </td>
 <td style="text-align:left;">
 NA
@@ -4837,9 +4562,6 @@ Upgrade and improvement deck equipment/othe description
 <td style="text-align:left;">
 NA
 </td>
-<td style="text-align:left;">
-NA
-</td>
 </tr>
 <tr>
 <td style="text-align:left;">
@@ -4850,9 +4572,6 @@ VARCHAR2(500 BYTE)
 </td>
 <td style="text-align:left;">
 Hull upgrade and improvement descriptions
-</td>
-<td style="text-align:left;">
-NA
 </td>
 <td style="text-align:left;">
 NA
@@ -4871,9 +4590,6 @@ Upgrade and improvement costs description
 <td style="text-align:left;">
 NA
 </td>
-<td style="text-align:left;">
-NA
-</td>
 </tr>
 <tr>
 <td style="text-align:left;">
@@ -4884,9 +4600,6 @@ VARCHAR2(500 BYTE)
 </td>
 <td style="text-align:left;">
 Upgrade and improvement cost descriptions
-</td>
-<td style="text-align:left;">
-NA
 </td>
 <td style="text-align:left;">
 NA
@@ -4905,9 +4618,6 @@ Upgrade and improvement costs descriptions
 <td style="text-align:left;">
 NA
 </td>
-<td style="text-align:left;">
-NA
-</td>
 </tr>
 <tr>
 <td style="text-align:left;">
@@ -4918,9 +4628,6 @@ VARCHAR2(500 BYTE)
 </td>
 <td style="text-align:left;">
 Upgrade and improvement costs descriptions
-</td>
-<td style="text-align:left;">
-NA
 </td>
 <td style="text-align:left;">
 NA
@@ -4939,9 +4646,6 @@ Non-crew Labor Services cost description
 <td style="text-align:left;">
 NA
 </td>
-<td style="text-align:left;">
-NA
-</td>
 </tr>
 <tr>
 <td style="text-align:left;">
@@ -4952,9 +4656,6 @@ VARCHAR2(50 BYTE)
 </td>
 <td style="text-align:left;">
 If there was another option chosen for captain status, description of that process is listed here
-</td>
-<td style="text-align:left;">
-NA
 </td>
 <td style="text-align:left;">
 NA
@@ -4973,9 +4674,6 @@ Other cost 1 description
 <td style="text-align:left;">
 NA
 </td>
-<td style="text-align:left;">
-NA
-</td>
 </tr>
 <tr>
 <td style="text-align:left;">
@@ -4990,9 +4688,6 @@ Other business level cost 1 description
 <td style="text-align:left;">
 NA
 </td>
-<td style="text-align:left;">
-NA
-</td>
 </tr>
 <tr>
 <td style="text-align:left;">
@@ -5003,9 +4698,6 @@ VARCHAR2(2000 BYTE)
 </td>
 <td style="text-align:left;">
 Other business level cost 1 description
-</td>
-<td style="text-align:left;">
-NA
 </td>
 <td style="text-align:left;">
 NA
@@ -5024,9 +4716,6 @@ Other cost 2 description
 <td style="text-align:left;">
 NA
 </td>
-<td style="text-align:left;">
-NA
-</td>
 </tr>
 <tr>
 <td style="text-align:left;">
@@ -5037,9 +4726,6 @@ VARCHAR2(4000 BYTE)
 </td>
 <td style="text-align:left;">
 Comments pertaining to health insurance question
-</td>
-<td style="text-align:left;">
-NA
 </td>
 <td style="text-align:left;">
 NA
@@ -5058,9 +4744,6 @@ Type of ownership if other was selected
 <td style="text-align:left;">
 This column had only a few entries and was combined with OWNER_TYPE
 </td>
-<td style="text-align:left;">
-NA
-</td>
 </tr>
 </tbody>
 </table>
@@ -5068,7 +4751,7 @@ NA
 </div>
 <div id="vcs_cost2015" class="section level2 hasAnchor" number="2.4">
 <h2><span class="header-section-number">2.4</span> VCS_COST2015<a href="tables-and-views.html#vcs_cost2015" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p><strong>Description:</strong> This is the cleaned data collected from the SSB 2015 cost survey. The costs collected at the vessel or business-level which will be described in the comments section. Note that variable names may change over time such that office_exp could be for all vessels in one year and the selected vessel in another. The data has been cleaned as described in the Cost Survey Tech Memo. All costs are presented in nominal dollars.</p>
+<p><strong>Description:</strong> This is the cleaned data collected from the SSB 2015 cost survey. The costs collected at the vessel or business-level which will be described in the comments section. Note that variable names may change over time such that office_exp could be for all vessels in one year and the selected vessel in another. The data has been cleaned as described in the Cost Survey Tech Memo. All costs are presented in nominal dollars.The primary key is HULLNUM and SURVEY_YEAR (not VESSEL_NAME.</p>
 <p><strong>Data Warnings:</strong> All overhead cost variables are collected for all vessels rather than the vessel-level.There may be some variables not included here that are in the survey because there were no responses provided in the dataset.</p>
 <div style="border: 1px solid #ddd; padding: 0px; overflow-y: scroll; height:400px; overflow-x: scroll; width:700px; ">
 <table class="table table-striped table-hover table-condensed" style="margin-left: auto; margin-right: auto;">
@@ -6693,7 +6376,7 @@ Imputed number of vessels
         </div>
       </div>
 <a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="additional-info.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="support-tables.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -6724,7 +6407,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/USERNAME/REPO/edit/BRANCH/01-intro.Rmd",
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/01-Tables_and_Views.Rmd",
 "text": "Edit"
 },
 "history": {
